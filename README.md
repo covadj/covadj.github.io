@@ -1,1 +1,0 @@
-# covadj.github.io
