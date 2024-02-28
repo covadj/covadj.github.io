@@ -1,10 +1,38 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "covadj.github.io",
+    "objectID": "subteam_standardization.html",
+    "href": "subteam_standardization.html",
+    "title": "Standardization and Outreach Subteam",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+    "text": "Aim and Plan\n\nWork with other sub-teams to provide recommendations for the appropriate analysis approaches using covariate adjustment with varied endpoints in accordance with the defined estimand framework. Develp comprehensive procedures and best practices in implementing the methods.\n\n1.1.   Continuous endpoints\n1.2.   Binary endpoints\n1.3.   Categorical endpoints\n1.4.   Time to event endpoints\n\nPromote harmonisation of language use with respect to covariate adjustments in clinical trial-related documents. Create a standardized lexicon to maintain consistent terminology and definitions. Create templates for the following documents:\n\n2.1.   Protocol\n2.2.   Statistical Analysis Plan\n2.3.   Clinical Study Report\n\nReach out to raise awareness about the appropriate use of covariate adjustments in the analyses of clinical trials and to promote the products from the working group.\n\n3.1.   Launch dedicated platforms (e.g., linkedin, X) to share insights, best practices, and updates from the working group\n3.2.   Develop a content calendar for regular posts on key topics, updates from recent research, and highlights from industry conferences.\n3.3.   Engage with the wider statistical and clinical community by sharing relevant work, hosting webinars, and participating in conferences/discussions."
+  },
+  {
+    "objectID": "subteam_education.html",
+    "href": "subteam_education.html",
+    "title": "Education Subteam",
+    "section": "",
+    "text": "Aim and Plan\nThe goal of the education sub-team is to teach short-courses, develop tutorials and practical guidelines, and collect real case studies.\nTo reach these goals, the education sub-team plans different kinds of activities for 2024:\n\nMonthly meeting (first Monday of the month).\nMake short-course material that will mainly be used to teach short-courses from November 2024 onwards.\nA workshop (e.g., of 90min) on intro to covariate adjustment (November 2024).\n2-3 online blog posts on covariate adjustment. These blog posts will also be disseminated through LinkedIn.\nCollect possible case studies which can be used for tutorials.\n\n\n\nPeople\nCo-leaders: Kelly Van Lancker (Ghent University) and Dominic Magirr (Novartis)\nMembers: Ting, Dan, Yanyao, Yu, Dong, Hongfei, Devan, Andreas, Olga, Victoria"
+  },
+  {
+    "objectID": "goals.html",
+    "href": "goals.html",
+    "title": "Goals",
+    "section": "",
+    "text": "“Covariate Adjustment SWG” is a scentific working group of the American Statistical Association (ASA) Biopharmaceutical section (BIOP)."
+  },
+  {
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "People",
+    "section": "",
+    "text": "Leadership Team:\n\nCo-chairs: Ye Ting (University of Washington), Jingyi Liu (Eli Lily)\nSecretary: Hongfei Li (Incyte)\n\n\n\nMembers\nxxx"
+  },
+  {
+    "objectID": "presentation.html",
+    "href": "presentation.html",
+    "title": "Advancement Subteam",
+    "section": "",
+    "text": "To be developed."
   },
   {
     "objectID": "about.html",
@@ -12,5 +40,61 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "subteam_advancement.html",
+    "href": "subteam_advancement.html",
+    "title": "Advancement Subteam",
+    "section": "",
+    "text": "The overarching goal of the advance sub-team is to develop and disseminate new statistical methods that address emerging challenges in covariate adjustment for randomized clinical trials (RCTs).\nIn the past five years, covariate adjustment has become increasing popular in analyzing RCTs and has also attracted great attention for methodological developments. However, the increasing complexities of real-world RCTs has outpaced the method development, leaving tons of open questions regarding covariate adjustment. For example, it remains not fully clear about the benefit of covariate adjustment and its appropriate implementation given missing data, longitudinal outcomes, time-to-event outcomes, complex trial designs, etc. These important gaps between practice and theory demand continuing efforts to deepen our understanding and develop new tools. As the statistical practice evolves, the advance sub-team aims to stay in the frontline of new techniques, results, and tools, targeting the boundary of knowledge and unopened questions.\nBearing the aim, the advance sub-team plans two kinds of activities:\n\nA monthly journal club to communicate new results regarding covariate adjustment.\nAn online forum for group-members to post/discuss questions and share resources.\n\n\n\nThe journal club takes an online format via zoom meeting and welcomes all members of the working group. Depending on the public interest, external audience can be accommodated later.\nThe journal club can take two formats: (1) roundtable discussion of an issue/question raised by group members; or (2) a seminar of recent papers presented by group members or invited external speakers. All sub-team members are encouraged to bring up roundtable topics and papers of interest through a shared Google doc, and Dr. Bingkai Wang will tentatively take the responsibilities to make schedule, invite and host speakers, and lead discussion. We do not restrict the topic of each meeting as long as it is relevant to covariate adjustment, e.g., a new method, confusions about current results, statistical software, experience sharing, etc. For each journal club meeting, we expect a warm and in-depth discussion such that new thoughts and results can be freely communicated.\n\n\n\nThe online forum serves as a platform for group members to share news, discuss questions, and post resources. In the early stage, a simple Google doc will be used to realize this function, and a formal webpage will be developed later. Dr. Bingkai Wang will tentatively maintain the forum and draft monthly newsletters summarizing the discussions for all group members.\nWe anticipate an informal and friendly forum that puts no pressure in speaking and benefits all readers. The sub-team members are especially encouraged to post thoughts and responses through the forum, aiming to warm up the forum in the early stage.\nBeyond the two activities,we also encourage offline collaborations and connections. We believe the planned activities can be a valuable opportunity to nurture new thoughts, connections, and findings. As a working group gathering worldwide talents and experts of RCTs, we have no doubt on the potential value of this platform and look forward to its powerful impact on the community."
+  },
+  {
+    "objectID": "subteam_advancement.html#journal-club",
+    "href": "subteam_advancement.html#journal-club",
+    "title": "Advancement Subteam",
+    "section": "",
+    "text": "The journal club takes an online format via zoom meeting and welcomes all members of the working group. Depending on the public interest, external audience can be accommodated later.\nThe journal club can take two formats: (1) roundtable discussion of an issue/question raised by group members; or (2) a seminar of recent papers presented by group members or invited external speakers. All sub-team members are encouraged to bring up roundtable topics and papers of interest through a shared Google doc, and Dr. Bingkai Wang will tentatively take the responsibilities to make schedule, invite and host speakers, and lead discussion. We do not restrict the topic of each meeting as long as it is relevant to covariate adjustment, e.g., a new method, confusions about current results, statistical software, experience sharing, etc. For each journal club meeting, we expect a warm and in-depth discussion such that new thoughts and results can be freely communicated."
+  },
+  {
+    "objectID": "subteam_advancement.html#online-forum",
+    "href": "subteam_advancement.html#online-forum",
+    "title": "Advancement Subteam",
+    "section": "",
+    "text": "The online forum serves as a platform for group members to share news, discuss questions, and post resources. In the early stage, a simple Google doc will be used to realize this function, and a formal webpage will be developed later. Dr. Bingkai Wang will tentatively maintain the forum and draft monthly newsletters summarizing the discussions for all group members.\nWe anticipate an informal and friendly forum that puts no pressure in speaking and benefits all readers. The sub-team members are especially encouraged to post thoughts and responses through the forum, aiming to warm up the forum in the early stage.\nBeyond the two activities,we also encourage offline collaborations and connections. We believe the planned activities can be a valuable opportunity to nurture new thoughts, connections, and findings. As a working group gathering worldwide talents and experts of RCTs, we have no doubt on the potential value of this platform and look forward to its powerful impact on the community."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ASA-BIOP Covariate Adjustment SWG",
+    "section": "",
+    "text": "This is a Quarto website."
+  },
+  {
+    "objectID": "subteam_software.html",
+    "href": "subteam_software.html",
+    "title": "Software Subteam",
+    "section": "",
+    "text": "Comprehensive coverage of methodologies (including existing and future methods)\n\n\n\nSelected methods with rigorous validation and clear documentation for GxP compliance"
+  },
+  {
+    "objectID": "subteam_software.html#robincar",
+    "href": "subteam_software.html#robincar",
+    "title": "Software Subteam",
+    "section": "",
+    "text": "Comprehensive coverage of methodologies (including existing and future methods)"
+  },
+  {
+    "objectID": "subteam_software.html#robincar2",
+    "href": "subteam_software.html#robincar2",
+    "title": "Software Subteam",
+    "section": "",
+    "text": "Selected methods with rigorous validation and clear documentation for GxP compliance"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "Test Post: Launch of the Website\n\n\n\n\n\nTest Post\n\n\n\n\n\nFeb 28, 2024\n\n\nCov Adj\n\n\n\n\n\n\nNo matching items"
   }
 ]
