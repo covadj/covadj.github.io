@@ -3,13 +3,45 @@ project:
   output-dir: docs
 
 website:
-  title: "covadj.github.io"
+  title: "ASA-BIOP Covariate Adjustment SWG"
+  site-url: https://covadj.github.io
+  description: "Webpage for ASA-BIOP Covariate Adjustment SWG"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
-
+      - text: About Us
+        menu:
+        - href: about.qmd
+          text: About
+        - href: goals.qmd
+          text: Goals
+        - href: people.qmd
+          text: People
+      - text: Task Force
+        menu: 
+          - href: subteam_advancement.qmd
+            text: Advancement Subteam
+          - href: subteam_software.qmd
+            text: Software Subteam
+          - href: subteam_standardization.qmd
+            text: Standardization and Outreach Subteam
+          - href: subteam_education.qmd
+            text: Education Subteam
+      - href: news.qmd
+        text: News
+      - href: presentation.qmd
+        text: Event
+      - href: blog.qmd
+        text: Blog
+    tools: 
+      - icon: twitter-x
+        href: https://twitter.com
+      - icon: github
+        href: https://github.com/covadj/covadj.github.io
+      - icon: rss
+        href: index.xml
+      
 format:
   html:
     theme: cosmo

@@ -1,0 +1,13 @@
+---
+title: "Software Subteam"
+---
+
+# Aim and Plan
+
+## RobinCar: 
+
+Comprehensive coverage of methodologies (including existing and future methods)
+
+## RobinCar2: 
+
+Selected methods with rigorous validation and clear documentation for GxP compliance

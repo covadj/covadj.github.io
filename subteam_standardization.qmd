@@ -1,0 +1,31 @@
+---
+title: "Standardization and Outreach Subteam"
+---
+
+# Aim and Plan
+
+-   Work with other sub-teams to provide recommendations for the appropriate analysis approaches using covariate adjustment with varied endpoints in accordance with the defined estimand framework. Develp comprehensive procedures and best practices in implementing the methods.
+
+1.1.   Continuous endpoints
+
+1.2.   Binary endpoints
+
+1.3.   Categorical endpoints
+
+1.4.   Time to event endpoints
+
+-   Promote harmonisation of language use with respect to covariate adjustments in clinical trial-related documents. Create a standardized lexicon to maintain consistent terminology and definitions. Create templates for the following documents:
+
+2.1.   Protocol
+
+2.2.   Statistical Analysis Plan
+
+2.3.   Clinical Study Report
+
+-   Reach out to raise awareness about the appropriate use of covariate adjustments in the analyses of clinical trials and to promote the products from the working group.
+
+3.1.   Launch dedicated platforms (e.g., linkedin, X) to share insights, best practices, and updates from the working group
+
+3.2.   Develop a content calendar for regular posts on key topics, updates from recent research, and highlights from industry conferences.
+
+3.3.   Engage with the wider statistical and clinical community by sharing relevant work, hosting webinars, and participating in conferences/discussions.

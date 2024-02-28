@@ -1,0 +1,21 @@
+---
+title: "Education Subteam"
+---
+
+# Aim and Plan
+
+The goal of the education sub-team is to teach short-courses, develop tutorials and practical guidelines, and collect real case studies.
+
+To reach these goals, the education sub-team plans different kinds of activities for 2024:
+
+1.  Monthly meeting (first Monday of the month).
+2.  Make short-course material that will mainly be used to teach short-courses from November 2024 onwards.
+3.  A workshop (e.g., of 90min) on intro to covariate adjustment (November 2024).
+4.  2-3 online blog posts on covariate adjustment. These blog posts will also be disseminated through LinkedIn.
+5.  Collect possible case studies which can be used for tutorials.
+
+# People
+
+**Co-leaders:** Kelly Van Lancker (Ghent University) and Dominic Magirr (Novartis)
+
+**Members:** Ting, Dan, Yanyao, Yu, Dong, Hongfei, Devan, Andreas, Olga, Victoria

@@ -4,5 +4,35 @@
   },
   "about.qmd": {
     "about.html": "8c11196d"
+  },
+  "goals.qmd": {
+    "goals.html": "fecd63af"
+  },
+  "news.qmd": {
+    "news.html": "809256ce"
+  },
+  "blog.qmd": {
+    "blog.html": "21ab432b"
+  },
+  "presentation.qmd": {
+    "presentation.html": "b7ce4ea2"
+  },
+  "posts/testpost.qmd": {
+    "testpost.html": "27a234ee"
+  },
+  "subteam_standardization.qmd": {
+    "subteam_standardization.html": "3675c75d"
+  },
+  "subteam_advancement.qmd": {
+    "subteam_advancement.html": "33d5e534"
+  },
+  "subteam_education.qmd": {
+    "subteam_education.html": "217160a7"
+  },
+  "subteam_software.qmd": {
+    "subteam_software.html": "f40f618a"
+  },
+  "people.qmd": {
+    "people.html": "2cf572e2"
   }
 }

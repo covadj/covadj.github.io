@@ -1,0 +1,35 @@
+---
+title: "Advancement Subteam"
+---
+
+# Aim and Plan
+
+[The overarching goal of the advance sub-team is to develop and disseminate new statistical methods that address emerging challenges in covariate adjustment for randomized clinical trials (RCTs).]{.underline}
+
+In the past five years, covariate adjustment has become increasing popular in analyzing RCTs and has also attracted great attention for methodological developments. However, the increasing complexities of real-world RCTs has outpaced the method development, leaving tons of open questions regarding covariate adjustment. For example, it remains not fully clear about the benefit of covariate adjustment and its appropriate implementation given missing data, longitudinal outcomes, time-to-event outcomes, complex trial designs, etc. These important gaps between practice and theory demand continuing efforts to deepen our understanding and develop new tools. As the statistical practice evolves, the advance sub-team aims to stay in the frontline of new techniques, results, and tools, targeting the boundary of knowledge and unopened questions.
+
+Bearing the aim, the advance sub-team plans two kinds of activities:
+
+1.  A monthly journal club to communicate new results regarding covariate adjustment.
+
+2.  An online forum for group-members to post/discuss questions and share resources.
+
+## **Journal Club**
+
+The journal club takes an online format via zoom meeting and welcomes all members of the working group. Depending on the public interest, external audience can be accommodated later.
+
+The journal club can take two formats: (1) roundtable discussion of an issue/question raised by group members; or (2) a seminar of recent papers presented by group members or invited external speakers. All sub-team members are encouraged to bring up roundtable topics and papers of interest through a shared Google doc, and Dr. Bingkai Wang will tentatively take the responsibilities to make schedule, invite and host speakers, and lead discussion. We do not restrict the topic of each meeting as long as it is relevant to covariate adjustment, e.g., a new method, confusions about current results, statistical software, experience sharing, etc. For each journal club meeting, we expect a warm and in-depth discussion such that new thoughts and results can be freely communicated.
+
+## **Online forum**
+
+The online forum serves as a platform for group members to share news, discuss questions, and post resources. In the early stage, a simple Google doc will be used to realize this function, and a formal webpage will be developed later. Dr. Bingkai Wang will tentatively maintain the forum and draft monthly newsletters summarizing the discussions for all group members.
+
+We anticipate an informal and friendly forum that puts no pressure in speaking and benefits all readers. The sub-team members are especially encouraged to post thoughts and responses through the forum, aiming to warm up the forum in the early stage.
+
+Beyond the two activities,we also encourage offline collaborations and connections. We believe the planned activities can be a valuable opportunity to nurture new thoughts, connections, and findings. As a working group gathering worldwide talents and experts of RCTs, we have no doubt on the potential value of this platform and look forward to its powerful impact on the community.
+
+# People
+
+-   **Sub-team co-leader**: Bingkai Wang
+
+-   **Sub-team members**: Frank Betz, Andreas Brandt, Victoria Johnson, Olga Kuznetsova, Kelly Van Lancker, Hongfei Li, Daniel Rubin, Yanyao Yi
