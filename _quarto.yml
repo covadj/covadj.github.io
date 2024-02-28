@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "covadj.github.io"
@@ -17,3 +18,5 @@ format:
 
 editor: visual
 
+execute:
+  freeze: auto
