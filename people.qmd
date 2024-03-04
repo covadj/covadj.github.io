@@ -4,8 +4,6 @@ title: "People"
 
 -   **Founders and co-chairs**: Ye Ting (University of Washington) and Jingyi Liu (Eli Lily)
 
--   **Secretary**: Hongfei Li (Incyte)
-
 -   **Advisor**: Frank Bretz (Novartis), Dan Rubin (FDA), and Andreas Brandt (BfArM)
 
 -   **Subteam co-leaders:**
@@ -17,6 +15,8 @@ title: "People"
     -   **Standardization and outreach sub-team**: Yu Du (Eli Lilly)
 
     -   **Advancement sub-team:** Bingkai Wang (University of Michigan)
+
+-   **Secretary**: Hongfei Li (Incyte)
 
 **Members**
 
