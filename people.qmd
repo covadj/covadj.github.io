@@ -2,12 +2,43 @@
 title: "People"
 ---
 
-# Leadership Team: 
+-   **Founders and co-chairs**: Ye Ting (University of Washington) and Jingyi Liu (Eli Lily)
 
--   Co-chairs: Ye Ting (University of Washington), Jingyi Liu (Eli Lily)
+-   **Secretary**: Hongfei Li (Incyte)
 
--   Secretary: Hongfei Li (Incyte)
+-   **Advisor**: Frank Bretz (Novartis), Dan Rubin (FDA), and Andreas Brandt (BfArM)
 
-# Members
+-   **Subteam co-leaders:**
 
-xxx
+    -   **Education sub-team:** Kelly Van Lancker (Ghent) and Dominic Magirr (Novartis)
+
+    -   **Software sub-team**: Dong Xi (Gilead) and Yanyao Yi (Eli Lilly)
+
+    -   **Standardization and outreach sub-team**: Yu Du (Eli Lilly)
+
+    -   **Advancement sub-team:** Bingkai Wang (University of Michigan)
+
+**Members**
+
+| First Name | Last Name  | Affiliation                                 |
+|------------|------------|---------------------------------------------|
+| Alen       | Wu         | Beigene                                     |
+| Andreas    | Brandt     | BfArM                                       |
+| Bingkai    | Wang       | University of Michigan, Biostatistics       |
+| Daniel     | Rubin      | FDA                                         |
+| Devan      | Mehrotra   | Merck                                       |
+| Dominic    | Magirr     | Novartis                                    |
+| Dong       | Xi         | Gilead                                      |
+| Frank      | Bretz      | Novartis                                    |
+| Hongfei    | Li         | Incyte                                      |
+| JIngyi     | Liu        | Eli Lilly                                   |
+| Jun        | Shao       | University of Wisconsin-Madison, Statistics |
+| Kelly Van  | Lancker    | Ghent University, Applied Math/CS/Stat      |
+| Ken        | Wu         | Beigene                                     |
+| Leiya      | Han        | PPD                                         |
+| Marlena    | Bannick    | University of Washington, Biostatistics     |
+| Olga       | Kuznetsova | Merck                                       |
+| Ting       | Ye         | University of Washington, Biostatistics     |
+| Victoria   | Johnson    | GSK                                         |
+| Yanyao     | Yi         | Eli Lilly                                   |
+| Yu         | Du         | Eli Lilly                                   |
