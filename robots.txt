@@ -1,1 +1,1 @@
-Sitemap: https://covadj.github.io/sitemap.xml
+Sitemap: https://carswg.github.io/sitemap.xml

@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>ASA-BIOP Covariate Adjustment SWG</title>
-<link>https://covadj.github.io/blog.html</link>
-<atom:link href="https://covadj.github.io/blog.xml" rel="self" type="application/rss+xml"/>
+<link>https://carswg.github.io/blog.html</link>
+<atom:link href="https://carswg.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
 <generator>quarto-1.4.550</generator>
 <lastBuildDate>Wed, 28 Feb 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Test Post: Launch of the Website</title>
   <dc:creator>Cov Adj</dc:creator>
-  <link>https://covadj.github.io/posts/testpost.html</link>
+  <link>https://carswg.github.io/posts/testpost.html</link>
   <description><![CDATA[ 
 
 
@@ -24,7 +24,7 @@
 
 
  ]]></description>
-  <guid>https://covadj.github.io/posts/testpost.html</guid>
+  <guid>https://carswg.github.io/posts/testpost.html</guid>
   <pubDate>Wed, 28 Feb 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
