@@ -14,8 +14,6 @@ website:
         menu:
         - href: about.qmd
           text: About
-        - href: goals.qmd
-          text: Goals
         - href: people.qmd
           text: People
       - text: Task Force
@@ -30,7 +28,7 @@ website:
             text: Education Subteam
       - href: news.qmd
         text: News
-      - href: presentation.qmd
+      - href: event.qmd
         text: Event
       - href: blog.qmd
         text: Blog

@@ -2,4 +2,4 @@
 title: "ASA-BIOP Covariate Adjustment SWG"
 ---
 
-This is a Quarto website.
+This is the home page of Covariate Adjustment Scientific Working Group.
