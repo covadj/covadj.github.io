@@ -6,17 +6,17 @@ title: "Software Subteam"
 
 To develop and maintain an R package family on covariate adjustment for industry/regulatory/academia with the RobinCar verse (**Rob**ust estimation and **In**ference for **C**ovariate **A**djustment in **R**andomized clinical trials).
 
-## RobinCar: 
+**RobinCar**: 
 
 To become one of the most comprehensive libraries of existing and future methods on covariate adjustment.
--   Comprehensive coverage of methodologies
--   Development version of RobinCar2
+* Comprehensive coverage of methodologies
+* Development version of RobinCar2
 
-## RobinCar2: 
+**RobinCar2**: 
 
 To become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.
--   A lite version of RobinCar in terms of methodology coverage
--   A more rigorously validated and better documented version of RobinCar, suitable for the GxP environment
+* A lite version of RobinCar in terms of methodology coverage
+* A more rigorously validated and better documented version of RobinCar, suitable for the GxP environment
 
 # People
 
