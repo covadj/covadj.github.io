@@ -1,5 +1,17 @@
 ---
 title: "ASA-BIOP Covariate Adjustment SWG"
+about:
+  template: jolla
+  links:
+    - icon: twitter-x
+      text: X
+      href: https://twitter.com
+    - icon: github
+      text: GitHub
+      href: https://github.com/carswg/carswg.github.io
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/asa-biopharmaceutical-section-working-group-of-covariate-adjustment-2050b62b8/ 
 ---
 
-This is the home page of Covariate Adjustment Scientific Working Group.
+This is the home page of American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Covariate Adjustment Scientific Working Group (SWG).
