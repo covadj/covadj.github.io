@@ -1,0 +1,30 @@
+---
+title: "Welcome to ASA BIOP Covariate Adjustment SWG's Webpage!"
+description: ""
+author: ""
+date: "03/06/2024"
+draft: false
+---
+
+Hello and welcome! 
+
+We're excited to share the launch of the ASA BIOP Covariate Adjustment SWG website. 
+
+
+```{=html}
+<script src="https://giscus.app/client.js"
+        data-repo="carswg/carswg.github.io"
+        data-repo-id="R_kgDOLX8xOg"
+        data-category="general"
+        data-category-id="DIC_kwDOLX8xOs4CeZQD"
+        data-mapping="title"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light_high_contrast"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+```

@@ -1,6 +1,13 @@
 ---
-title: "Journal Club"
+listing:
+  contents: journalclub
+  sort: "date desc"
+  type: default
+  categories: true
+  feed: true
 ---
+
+## Journal Club
 
 The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:
 
@@ -11,7 +18,8 @@ These enriching sessions are held on the **second Friday of every month, from 11
 
 We warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at [bingkai\@umich.edu](mailto:bingkai@umich.edu).
 
-List of Journal Club activity:
+## Events
+<!-- List of Journal Club activity: -->
 
-1.  Journal Club: Discussion on the FDA Guidance for Covariate Adjustment, 15 Mar 2024. [details](./posts/journalclub1.html)
-2.  [Upcoming] Journal Club: Variance Estimation for G-computation with Binary Outcomes, 12 Apr 2024. [details](./posts/journalclub2.html)
+<!-- 1.  Journal Club: Discussion on the FDA Guidance for Covariate Adjustment, 15 Mar 2024. [details](./posts/journalclub1.html) -->
+<!-- 2.  \[Upcoming\] Journal Club: Variance Estimation for G-computation with Binary Outcomes, 12 Apr 2024. [details](./posts/journalclub2.html) -->

@@ -49,5 +49,23 @@
   },
   "posts/journalclub1.qmd": {
     "journalclub1.html": "2846fc89"
+  },
+  "posts_jc/journalclub2.qmd": {
+    "journalclub2.html": "9b3480cf"
+  },
+  "posts/template_draft.qmd": {
+    "template_draft.html": "36fd20e8"
+  },
+  "posts_jc/journalclub1.qmd": {
+    "journalclub1.html": "1cd8078a"
+  },
+  "posts/website_launch.qmd": {
+    "website_launch.html": "f46565bb"
+  },
+  "journalclub/journalclub1.qmd": {
+    "journalclub1.html": "055354ec"
+  },
+  "journalclub/journalclub2.qmd": {
+    "journalclub2.html": "d80daeae"
   }
 }
