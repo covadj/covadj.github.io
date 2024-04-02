@@ -5,7 +5,7 @@ about:
   links:
     - icon: twitter-x
       text: X
-      href: https://twitter.com
+      href: https://x.com/CAR_SWG?s=20
     - icon: github
       text: GitHub
       href: https://github.com/carswg/carswg.github.io

@@ -34,5 +34,20 @@
   },
   "people.qmd": {
     "people.html": "2cf572e2"
+  },
+  "journal_club.qmd": {
+    "journal_club.html": "22c66cc4"
+  },
+  "conference.qmd": {
+    "conference.html": "b3d417b9"
+  },
+  "posts/jc2.qmd": {
+    "jc2.html": "e715c9b8"
+  },
+  "posts/journalclub2.qmd": {
+    "journalclub2.html": "684279f5"
+  },
+  "posts/journalclub1.qmd": {
+    "journalclub1.html": "2846fc89"
   }
 }

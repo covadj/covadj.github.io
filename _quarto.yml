@@ -28,8 +28,12 @@ website:
             text: Education Subteam
       - href: news.qmd
         text: News
-      - href: event.qmd
-        text: Event
+      - text: Event
+        menu: 
+          - href: journal_club.qmd
+            text: Journal Club
+          - href: conference.qmd
+            text: Conference Presentation
       - href: blog.qmd
         text: Blog
     tools: 

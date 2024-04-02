@@ -1,0 +1,21 @@
+---
+title: "Journal Club: Discussion on the FDA Guidance for Covariate Adjustment"
+description: "March 2024 Journal Club"
+author: ""
+date: "03/06/2024"
+draft: false
+---
+
+**Topic:** Discussion on the FDA Guidance for Covariate Adjustment
+
+**Datetime: March 15th Friday, 11am-12pm EDT**
+
+**Host:** Bingkai Wang (*UMich*)
+
+**Discussants**: Frank Bretz (*Novartis*), Daniel Rubin (*FDA*), and Ting Ye (*UWashington*)
+
+**Open-floor discussion:** 20min.
+
+**Zoom link:** <https://upenn.zoom.us/j/4909817768>
+
+**Recording:** [Journal-club-0315.mp4 - Google Drive](https://drive.google.com/file/d/1VSWw40RTpN2RLctit1gqs3Ld7o1FetEz/view?ts=65f481c3)

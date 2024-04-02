@@ -1,0 +1,19 @@
+---
+title: "[Upcoming] Journal Club: Variance Estimation for G-computation with Binary Outcomes"
+description: "April 2024 Journal Club"
+author: "abc"
+date: "03/25/2024"
+draft: false
+---
+
+**Topic:** Variance Estimation for G-computation with Binary Outcomes
+
+**Datetime: April 12th Friday, 11am-12pm EDT.**
+
+**Presenter:** Dominic Magirr from Novartis (20min presentation about comparisons of different methods)
+
+**Discussants**: Daniel Rubin, Dong Xi, and Ting Ye (20min discussion).
+
+**Open-floor discussion:** 20min.
+
+**Zoom link:** [https://umich.zoom.us/j/7573650566](https://umich.zoom.us/j/7573650566)
