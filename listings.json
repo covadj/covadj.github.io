@@ -2,8 +2,14 @@
   {
     "listing": "/blog.html",
     "items": [
-      "/posts/journalclub2.html",
-      "/posts/journalclub1.html"
+      "/posts/website_launch.html"
+    ]
+  },
+  {
+    "listing": "/journal_club.html",
+    "items": [
+      "/journalclub/journalclub2.html",
+      "/journalclub/journalclub1.html"
     ]
   }
 ]

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>ASA-BIOP Covariate Adjustment SWG</title>
+<link>https://carswg.github.io/journal_club.html</link>
+<atom:link href="https://carswg.github.io/journal_club.xml" rel="self" type="application/rss+xml"/>
+<description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
+<generator>quarto-1.4.552</generator>
+<lastBuildDate>Fri, 12 Apr 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>[Upcoming] Variance Estimation for G-computation with Binary Outcomes</title>
+  <link>https://carswg.github.io/journalclub/journalclub2.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Topic:</strong> Variance Estimation for G-computation with Binary Outcomes</p>
+<p><strong>Datetime: April 12th Friday, 11am-12pm EDT.</strong></p>
+<p><strong>Presenter:</strong> Dominic Magirr from Novartis (20min presentation about comparisons of different methods)</p>
+<p><strong>Discussants</strong>: Daniel Rubin, Dong Xi, and Ting Ye (20min discussion).</p>
+<p><strong>Open-floor discussion:</strong> 20min.</p>
+<p><strong>Zoom link:</strong> <a href="https://umich.zoom.us/j/7573650566" class="uri">https://umich.zoom.us/j/7573650566</a></p>
+<script src="https://giscus.app/client.js" data-repo="carswg/carswg.github.io" data-repo-id="R_kgDOLX8xOg" data-category="general" data-category-id="DIC_kwDOLX8xOs4CeZQD" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light_high_contrast" data-lang="en" crossorigin="anonymous" async="">
+</script>
+
+
+
+ ]]></description>
+  <category>journal club</category>
+  <guid>https://carswg.github.io/journalclub/journalclub2.html</guid>
+  <pubDate>Fri, 12 Apr 2024 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Discussion on the FDA Guidance for Covariate Adjustment</title>
+  <link>https://carswg.github.io/journalclub/journalclub1.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Topic:</strong> Discussion on the FDA Guidance for Covariate Adjustment</p>
+<p><strong>Datetime: March 15th Friday, 11am-12pm EDT</strong></p>
+<p><strong>Host:</strong> Bingkai Wang (<em>UMich</em>)</p>
+<p><strong>Discussants</strong>: Frank Bretz (<em>Novartis</em>), Daniel Rubin (<em>FDA</em>), and Ting Ye (<em>UWashington</em>)</p>
+<p><strong>Open-floor discussion:</strong> 20min.</p>
+<p><strong>Zoom link:</strong> <a href="https://upenn.zoom.us/j/4909817768" class="uri">https://upenn.zoom.us/j/4909817768</a></p>
+<p><strong>Recording:</strong> <a href="https://drive.google.com/file/d/1VSWw40RTpN2RLctit1gqs3Ld7o1FetEz/view?ts=65f481c3">Journal-club-0315.mp4 - Google Drive</a></p>
+<script src="https://giscus.app/client.js" data-repo="carswg/carswg.github.io" data-repo-id="R_kgDOLX8xOg" data-category="general" data-category-id="DIC_kwDOLX8xOs4CeZQD" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light_high_contrast" data-lang="en" crossorigin="anonymous" async="">
+</script>
+
+
+
+ ]]></description>
+  <category>journal club</category>
+  <guid>https://carswg.github.io/journalclub/journalclub1.html</guid>
+  <pubDate>Fri, 15 Mar 2024 00:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
