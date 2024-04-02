@@ -1,7 +1,0 @@
----
-title: "Test Post: Launch of the Website"
-description: "Test Post"
-author: "Cov Adj"
-date: "02/28/2024"
-draft: false
----
