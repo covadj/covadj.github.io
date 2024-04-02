@@ -9,23 +9,51 @@
 <link>https://carswg.github.io/blog.html</link>
 <atom:link href="https://carswg.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
-<generator>quarto-1.4.551</generator>
-<lastBuildDate>Wed, 28 Feb 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.552</generator>
+<lastBuildDate>Mon, 25 Mar 2024 00:00:00 GMT</lastBuildDate>
 <item>
-  <title>Test Post: Launch of the Website</title>
-  <dc:creator>Cov Adj</dc:creator>
-  <link>https://carswg.github.io/posts/testpost.html</link>
+  <title>[Upcoming] Journal Club: Variance Estimation for G-computation with Binary Outcomes</title>
+  <dc:creator>abc </dc:creator>
+  <link>https://carswg.github.io/posts/journalclub2.html</link>
   <description><![CDATA[ 
 
 
 
 
+<p><strong>Topic:</strong> Variance Estimation for G-computation with Binary Outcomes</p>
+<p><strong>Datetime: April 12th Friday, 11am-12pm EDT.</strong></p>
+<p><strong>Presenter:</strong> Dominic Magirr from Novartis (20min presentation about comparisons of different methods)</p>
+<p><strong>Discussants</strong>: Daniel Rubin, Dong Xi, and Ting Ye (20min discussion).</p>
+<p><strong>Open-floor discussion:</strong> 20min.</p>
+<p><strong>Zoom link:</strong> <a href="https://umich.zoom.us/j/7573650566">https://umich.zoom.us/j/7573650566</a></p>
 
 
 
  ]]></description>
-  <guid>https://carswg.github.io/posts/testpost.html</guid>
-  <pubDate>Wed, 28 Feb 2024 00:00:00 GMT</pubDate>
+  <guid>https://carswg.github.io/posts/journalclub2.html</guid>
+  <pubDate>Mon, 25 Mar 2024 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Journal Club: Discussion on the FDA Guidance for Covariate Adjustment</title>
+  <link>https://carswg.github.io/posts/journalclub1.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Topic:</strong> Discussion on the FDA Guidance for Covariate Adjustment</p>
+<p><strong>Datetime: March 15th Friday, 11am-12pm EDT</strong></p>
+<p><strong>Host:</strong> Bingkai Wang (<em>UMich</em>)</p>
+<p><strong>Discussants</strong>: Frank Bretz (<em>Novartis</em>), Daniel Rubin (<em>FDA</em>), and Ting Ye (<em>UWashington</em>)</p>
+<p><strong>Open-floor discussion:</strong> 20min.</p>
+<p><strong>Zoom link:</strong> <a href="https://upenn.zoom.us/j/4909817768" class="uri">https://upenn.zoom.us/j/4909817768</a></p>
+<p><strong>Recording:</strong> <a href="https://drive.google.com/file/d/1VSWw40RTpN2RLctit1gqs3Ld7o1FetEz/view?ts=65f481c3">Journal-club-0315.mp4 - Google Drive</a></p>
+
+
+
+ ]]></description>
+  <guid>https://carswg.github.io/posts/journalclub1.html</guid>
+  <pubDate>Wed, 06 Mar 2024 00:00:00 GMT</pubDate>
 </item>
 </channel>
 </rss>
