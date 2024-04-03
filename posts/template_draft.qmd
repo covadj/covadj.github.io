@@ -6,13 +6,12 @@ date: "03/06/2024"
 draft: true
 ---
 
-
 ```{=html}
 <script src="https://giscus.app/client.js"
         data-repo="carswg/carswg.github.io"
         data-repo-id="R_kgDOLX8xOg"
-        data-category="general"
-        data-category-id="DIC_kwDOLX8xOs4CeZQD"
+        data-category="General"
+        data-category-id="DIC_kwDOLX8xOs4CeZQB"
         data-mapping="title"
         data-strict="1"
         data-reactions-enabled="1"
