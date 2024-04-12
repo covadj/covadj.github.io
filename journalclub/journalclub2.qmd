@@ -1,5 +1,5 @@
 ---
-title: "[Upcoming] Variance Estimation for G-computation with Binary Outcomes"
+title: "Variance Estimation for G-computation with Binary Outcomes"
 description: "April 2024 Journal Club"
 author: ""
 date: "04/12/2024"
