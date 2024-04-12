@@ -20,7 +20,12 @@ categories:
 
 **Zoom link:** <https://upenn.zoom.us/j/4909817768>
 
-**Recording:** [Journal-club-0315.mp4 - Google Drive](https://drive.google.com/file/d/1VSWw40RTpN2RLctit1gqs3Ld7o1FetEz/view?ts=65f481c3)
+**Recording:** 
+<!-- [Journal-club-0315.mp4 - Google Drive](https://drive.google.com/file/d/1VSWw40RTpN2RLctit1gqs3Ld7o1FetEz/view?ts=65f481c3) -->
+
+```{=html}
+<iframe src="https://drive.google.com/file/d/1VSWw40RTpN2RLctit1gqs3Ld7o1FetEz/preview" width="640" height="480" allowfullscreen="true" allow="autoplay"></iframe>
+```
 
 ```{=html}
 <script src="https://giscus.app/client.js"
