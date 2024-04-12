@@ -9,8 +9,31 @@
 <link>https://carswg.github.io/journal_club.html</link>
 <atom:link href="https://carswg.github.io/journal_club.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
-<generator>quarto-1.4.552</generator>
-<lastBuildDate>Fri, 12 Apr 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.553</generator>
+<lastBuildDate>Fri, 10 May 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>[Upcoming] A General Form of Covariate Adjustment in Randomized Clinical Trials</title>
+  <link>https://carswg.github.io/journalclub/journalclub3.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Topic:</strong> A General Form of Covariate Adjustment in Randomized Clinical Trials</p>
+<p><strong>Datetime: May 10th Friday, 11am-12pm EDT.</strong></p>
+<p><strong>Presenter:</strong> Marlena Bannick from University of Washington</p>
+<p><strong>Zoom link:</strong> <a href="https://umich.zoom.us/j/7573650566" class="uri">https://umich.zoom.us/j/7573650566</a></p>
+<p><strong>Paper link:</strong> <a href="https://arxiv.org/abs/2306.10213" class="uri">https://arxiv.org/abs/2306.10213</a></p>
+<script src="https://giscus.app/client.js" data-repo="carswg/carswg.github.io" data-repo-id="R_kgDOLX8xOg" data-category="General" data-category-id="DIC_kwDOLX8xOs4CeZQB" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light_high_contrast" data-lang="en" crossorigin="anonymous" async="">
+</script>
+
+
+
+ ]]></description>
+  <category>journal club</category>
+  <guid>https://carswg.github.io/journalclub/journalclub3.html</guid>
+  <pubDate>Fri, 10 May 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>[Upcoming] Variance Estimation for G-computation with Binary Outcomes</title>
   <link>https://carswg.github.io/journalclub/journalclub2.html</link>
