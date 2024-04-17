@@ -18,7 +18,10 @@ categories:
 
 **Open-floor discussion:** 20min.
 
-**Zoom link:** <https://umich.zoom.us/j/7573650566>
+**Recording:** 
+```{=html}
+<iframe src="https://drive.google.com/file/d/1ZVMlCLA996-nBRkmFbYa9sSn8w6KclDV/preview" width="640" height="480" allowfullscreen="true" allow="autoplay"></iframe>
+```
 
 ```{=html}
 <script src="https://giscus.app/client.js"
