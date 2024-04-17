@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "subteam_standardization.html",
+    "href": "subteam_standardization.html",
+    "title": "Standardization and Outreach Subteam",
     "section": "",
-    "text": "“Covariate Adjustment SWG” is a scentific working group of the American Statistical Association (ASA) Biopharmaceutical section (BIOP)."
+    "text": "Aim and Plan\n\nWork with other sub-teams to provide recommendations for the appropriate analysis approaches using covariate adjustment with varied endpoints in accordance with the defined estimand framework. Develp comprehensive procedures and best practices in implementing the methods.\n\n1.1.   Continuous endpoints\n1.2.   Binary endpoints\n1.3.   Categorical endpoints\n1.4.   Time to event endpoints\n\nPromote harmonisation of language use with respect to covariate adjustments in clinical trial-related documents. Create a standardized lexicon to maintain consistent terminology and definitions. Create templates for the following documents:\n\n2.1.   Protocol\n2.2.   Statistical Analysis Plan\n2.3.   Clinical Study Report\n\nReach out to raise awareness about the appropriate use of covariate adjustments in the analyses of clinical trials and to promote the products from the working group.\n\n3.1.   Launch dedicated platforms (e.g., linkedin, X) to share insights, best practices, and updates from the working group\n3.2.   Develop a content calendar for regular posts on key topics, updates from recent research, and highlights from industry conferences.\n3.3.   Engage with the wider statistical and clinical community by sharing relevant work, hosting webinars, and participating in conferences/discussions."
   },
   {
     "objectID": "subteam_advancement.html",
@@ -28,27 +28,6 @@
     "text": "The online forum serves as a platform for group members to share news, discuss questions, and post resources. In the early stage, a simple Google doc will be used to realize this function, and a formal webpage will be developed later. Dr. Bingkai Wang will tentatively maintain the forum and draft monthly newsletters summarizing the discussions for all group members.\nWe anticipate an informal and friendly forum that puts no pressure in speaking and benefits all readers. The sub-team members are especially encouraged to post thoughts and responses through the forum, aiming to warm up the forum in the early stage.\nBeyond the two activities,we also encourage offline collaborations and connections. We believe the planned activities can be a valuable opportunity to nurture new thoughts, connections, and findings. As a working group gathering worldwide talents and experts of RCTs, we have no doubt on the potential value of this platform and look forward to its powerful impact on the community."
   },
   {
-    "objectID": "journalclub/journalclub2.html",
-    "href": "journalclub/journalclub2.html",
-    "title": "Variance Estimation for G-computation with Binary Outcomes",
-    "section": "",
-    "text": "Topic: Variance Estimation for G-computation with Binary Outcomes\nDatetime: April 12th Friday, 11am-12pm EDT.\nPresenter: Dominic Magirr from Novartis (20min presentation about comparisons of different methods)\nDiscussants: Daniel Rubin, Dong Xi, and Ting Ye (20min discussion).\nOpen-floor discussion: 20min.\nZoom link: https://umich.zoom.us/j/7573650566"
-  },
-  {
-    "objectID": "people.html",
-    "href": "people.html",
-    "title": "People",
-    "section": "",
-    "text": "Founders and co-chairs: Ye Ting (University of Washington) and Jingyi Liu (Eli Lily)\nAdvisor: Frank Bretz (Novartis), Dan Rubin (FDA), and Andreas Brandt (BfArM)\nSubteam co-leaders:\n\nEducation sub-team: Kelly Van Lancker (Ghent) and Dominic Magirr (Novartis)\nSoftware sub-team: Dong Xi (Gilead) and Yanyao Yi (Eli Lilly)\nStandardization and outreach sub-team: Yu Du (Eli Lilly)\nAdvancement sub-team: Bingkai Wang (University of Michigan)\n\nSecretary: Hongfei Li (Incyte)\n\nMembers\n\n\n\n\n\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlen\nWu\nBeigene\n\n\nAndreas\nBrandt\nBfArM\n\n\nBingkai\nWang\nUniversity of Michigan, Biostatistics\n\n\nDaniel\nRubin\nFDA\n\n\nDevan\nMehrotra\nMerck\n\n\nDominic\nMagirr\nNovartis\n\n\nDong\nXi\nGilead\n\n\nFrank\nBretz\nNovartis\n\n\nHongfei\nLi\nIncyte\n\n\nJIngyi\nLiu\nEli Lilly\n\n\nJun\nShao\nUniversity of Wisconsin-Madison, Statistics\n\n\nKelly Van\nLancker\nGhent University, Applied Math/CS/Stat\n\n\nKen\nWu\nBeigene\n\n\nLeiya\nHan\nPPD\n\n\nMarlena\nBannick\nUniversity of Washington, Biostatistics\n\n\nOlga\nKuznetsova\nMerck\n\n\nTing\nYe\nUniversity of Washington, Biostatistics\n\n\nVictoria\nJohnson\nGSK\n\n\nYanyao\nYi\nEli Lilly\n\n\nYu\nDu\nEli Lilly"
-  },
-  {
-    "objectID": "subteam_education.html",
-    "href": "subteam_education.html",
-    "title": "Education Subteam",
-    "section": "",
-    "text": "Aim and Plan\nThe goal of the education sub-team is to teach short-courses, develop tutorials and practical guidelines, and collect real case studies.\nTo reach these goals, the education sub-team plans different kinds of activities for 2024:\n\nMonthly meeting (first Monday of the month).\nMake short-course material that will mainly be used to teach short-courses from November 2024 onwards.\nA workshop (e.g., of 90min) on intro to covariate adjustment (November 2024).\n2-3 online blog posts on covariate adjustment. These blog posts will also be disseminated through LinkedIn.\nCollect possible case studies which can be used for tutorials.\n\n\n\nPeople\nCo-leaders: Kelly Van Lancker (Ghent University) and Dominic Magirr (Novartis)\nMembers: Ting, Dan, Yanyao, Yu, Dong, Hongfei, Devan, Andreas, Olga, Victoria"
-  },
-  {
     "objectID": "subteam_software.html",
     "href": "subteam_software.html",
     "title": "Software Subteam",
@@ -70,18 +49,32 @@
     "text": "To become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.\n\nA lite version of RobinCar in terms of methodology coverage\nA more rigorously validated and better documented version of RobinCar, suitable for the GxP environment"
   },
   {
-    "objectID": "subteam_standardization.html",
-    "href": "subteam_standardization.html",
-    "title": "Standardization and Outreach Subteam",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "Aim and Plan\n\nWork with other sub-teams to provide recommendations for the appropriate analysis approaches using covariate adjustment with varied endpoints in accordance with the defined estimand framework. Develp comprehensive procedures and best practices in implementing the methods.\n\n1.1.   Continuous endpoints\n1.2.   Binary endpoints\n1.3.   Categorical endpoints\n1.4.   Time to event endpoints\n\nPromote harmonisation of language use with respect to covariate adjustments in clinical trial-related documents. Create a standardized lexicon to maintain consistent terminology and definitions. Create templates for the following documents:\n\n2.1.   Protocol\n2.2.   Statistical Analysis Plan\n2.3.   Clinical Study Report\n\nReach out to raise awareness about the appropriate use of covariate adjustments in the analyses of clinical trials and to promote the products from the working group.\n\n3.1.   Launch dedicated platforms (e.g., linkedin, X) to share insights, best practices, and updates from the working group\n3.2.   Develop a content calendar for regular posts on key topics, updates from recent research, and highlights from industry conferences.\n3.3.   Engage with the wider statistical and clinical community by sharing relevant work, hosting webinars, and participating in conferences/discussions."
+    "text": "“Covariate Adjustment SWG” is a scentific working group of the American Statistical Association (ASA) Biopharmaceutical section (BIOP)."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ASA-BIOP Covariate Adjustment SWG",
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "People",
     "section": "",
-    "text": "This is the home page of American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Covariate Adjustment Scientific Working Group (SWG)."
+    "text": "Founders and co-chairs: Ye Ting (University of Washington) and Jingyi Liu (Eli Lily)\nAdvisor: Frank Bretz (Novartis), Dan Rubin (FDA), and Andreas Brandt (BfArM)\nSubteam co-leaders:\n\nEducation sub-team: Kelly Van Lancker (Ghent) and Dominic Magirr (Novartis)\nSoftware sub-team: Dong Xi (Gilead) and Yanyao Yi (Eli Lilly)\nStandardization and outreach sub-team: Yu Du (Eli Lilly)\nAdvancement sub-team: Bingkai Wang (University of Michigan)\n\nSecretary: Hongfei Li (Incyte)\n\nMembers\n\n\n\n\n\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlen\nWu\nBeigene\n\n\nAndreas\nBrandt\nBfArM\n\n\nBingkai\nWang\nUniversity of Michigan, Biostatistics\n\n\nDaniel\nRubin\nFDA\n\n\nDevan\nMehrotra\nMerck\n\n\nDominic\nMagirr\nNovartis\n\n\nDong\nXi\nGilead\n\n\nFrank\nBretz\nNovartis\n\n\nHongfei\nLi\nIncyte\n\n\nJIngyi\nLiu\nEli Lilly\n\n\nJun\nShao\nUniversity of Wisconsin-Madison, Statistics\n\n\nKelly Van\nLancker\nGhent University, Applied Math/CS/Stat\n\n\nKen\nWu\nBeigene\n\n\nLeiya\nHan\nPPD\n\n\nMarlena\nBannick\nUniversity of Washington, Biostatistics\n\n\nOlga\nKuznetsova\nMerck\n\n\nTing\nYe\nUniversity of Washington, Biostatistics\n\n\nVictoria\nJohnson\nGSK\n\n\nYanyao\nYi\nEli Lilly\n\n\nYu\nDu\nEli Lilly"
+  },
+  {
+    "objectID": "journalclub/journalclub2.html",
+    "href": "journalclub/journalclub2.html",
+    "title": "Variance Estimation for G-computation with Binary Outcomes",
+    "section": "",
+    "text": "Topic: Variance Estimation for G-computation with Binary Outcomes\nDatetime: April 12th Friday, 11am-12pm EDT.\nPresenter: Dominic Magirr from Novartis (20min presentation about comparisons of different methods)\nDiscussants: Daniel Rubin, Dong Xi, and Ting Ye (20min discussion).\nOpen-floor discussion: 20min.\nRecording:"
+  },
+  {
+    "objectID": "subteam_education.html",
+    "href": "subteam_education.html",
+    "title": "Education Subteam",
+    "section": "",
+    "text": "Aim and Plan\nThe goal of the education sub-team is to teach short-courses, develop tutorials and practical guidelines, and collect real case studies.\nTo reach these goals, the education sub-team plans different kinds of activities for 2024:\n\nMonthly meeting (first Monday of the month).\nMake short-course material that will mainly be used to teach short-courses from November 2024 onwards.\nA workshop (e.g., of 90min) on intro to covariate adjustment (November 2024).\n2-3 online blog posts on covariate adjustment. These blog posts will also be disseminated through LinkedIn.\nCollect possible case studies which can be used for tutorials.\n\n\n\nPeople\nCo-leaders: Kelly Van Lancker (Ghent University) and Dominic Magirr (Novartis)\nMembers: Ting, Dan, Yanyao, Yu, Dong, Hongfei, Devan, Andreas, Olga, Victoria"
   },
   {
     "objectID": "journal_club.html",
@@ -105,6 +98,27 @@
     "text": "Events"
   },
   {
+    "objectID": "journalclub/journalclub1.html",
+    "href": "journalclub/journalclub1.html",
+    "title": "Discussion on the FDA Guidance for Covariate Adjustment",
+    "section": "",
+    "text": "Topic: Discussion on the FDA Guidance for Covariate Adjustment\nDatetime: March 15th Friday, 11am-12pm EDT\nHost: Bingkai Wang (UMich)\nDiscussants: Frank Bretz (Novartis), Daniel Rubin (FDA), and Ting Ye (UWashington)\nOpen-floor discussion: 20min.\nZoom link: https://upenn.zoom.us/j/4909817768\nRecording:"
+  },
+  {
+    "objectID": "journalclub/journalclub3.html",
+    "href": "journalclub/journalclub3.html",
+    "title": "[Upcoming] A General Form of Covariate Adjustment in Randomized Clinical Trials",
+    "section": "",
+    "text": "Topic: A General Form of Covariate Adjustment in Randomized Clinical Trials\nDatetime: May 10th Friday, 11am-12pm EDT.\nPresenter: Marlena Bannick from University of Washington\nZoom link: https://umich.zoom.us/j/7573650566\nPaper link: https://arxiv.org/abs/2306.10213"
+  },
+  {
+    "objectID": "conference.html",
+    "href": "conference.html",
+    "title": "Events",
+    "section": "",
+    "text": "This page intends to list all the conference presentation.\nUnder development"
+  },
+  {
     "objectID": "posts/website_launch.html",
     "href": "posts/website_launch.html",
     "title": "Welcome to ASA BIOP Covariate Adjustment SWG’s Webpage!",
@@ -119,24 +133,10 @@
     "text": "Welcome to ASA BIOP Covariate Adjustment SWG’s Webpage!\n\n\n\n\n\n\n\n\n\n\n\nMar 6, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "conference.html",
-    "href": "conference.html",
-    "title": "Events",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ASA-BIOP Covariate Adjustment SWG",
     "section": "",
-    "text": "This page intends to list all the conference presentation.\nUnder development"
-  },
-  {
-    "objectID": "journalclub/journalclub3.html",
-    "href": "journalclub/journalclub3.html",
-    "title": "[Upcoming] A General Form of Covariate Adjustment in Randomized Clinical Trials",
-    "section": "",
-    "text": "Topic: A General Form of Covariate Adjustment in Randomized Clinical Trials\nDatetime: May 10th Friday, 11am-12pm EDT.\nPresenter: Marlena Bannick from University of Washington\nZoom link: https://umich.zoom.us/j/7573650566\nPaper link: https://arxiv.org/abs/2306.10213"
-  },
-  {
-    "objectID": "journalclub/journalclub1.html",
-    "href": "journalclub/journalclub1.html",
-    "title": "Discussion on the FDA Guidance for Covariate Adjustment",
-    "section": "",
-    "text": "Topic: Discussion on the FDA Guidance for Covariate Adjustment\nDatetime: March 15th Friday, 11am-12pm EDT\nHost: Bingkai Wang (UMich)\nDiscussants: Frank Bretz (Novartis), Daniel Rubin (FDA), and Ting Ye (UWashington)\nOpen-floor discussion: 20min.\nZoom link: https://upenn.zoom.us/j/4909817768\nRecording:"
+    "text": "This is the home page of American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Covariate Adjustment Scientific Working Group (SWG)."
   }
 ]
