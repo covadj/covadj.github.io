@@ -14,7 +14,10 @@ categories:
 
 **Presenter:** Marlena Bannick from University of Washington
 
-**Zoom link:** <https://umich.zoom.us/j/7573650566>
+**Recording:** 
+```{=html}
+<iframe src="https://drive.google.com/file/d/167YZuPvqe1u-pKVNak82tzX1s_TdPJfG/preview" width="640" height="480" allowfullscreen="true" allow="autoplay"></iframe>
+```
 
 **Paper link:** <https://arxiv.org/abs/2306.10213>
 
