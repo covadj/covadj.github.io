@@ -1,0 +1,32 @@
+---
+title: "[Upcoming] Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes"
+description: "June 2024 Journal Club"
+author: ""
+date: "06/14/2024"
+draft: false
+categories:
+  - journal club
+---
+
+**Topic:** AStrategies for Practical and Effective Covariate Adjustment of Continuous Outcomes
+
+**Datetime: June 14th Friday, 11am-12pm EDT.**
+
+**Presenter:** Michel Friesenhahn from Genentech
+
+**Zoom link:**: https://umich.zoom.us/j/7573650566
+
+**Summary:** There has been considerable research that has put covariate adjustment on firm footing, even for use in the primary analysis of confirmatory clinical trials. Several of my colleagues and I saw there was a need to explain the insights generated from this research and to distill them into simple and practical suggestions for implementation. Our recommendations for continuous outcomes when primary interest is in unconditional treatment effect estimands, such as Average Treatment Effects (ATEs), are written up in blog form (https://stats4datascience.com/posts/covariate_adjustment/).
+
+For this talk, I will discuss selected proposals from the blog that I think may be of particular interest to the working group, as well as potential areas for future work:
+
+1. Performance metrics and their use in analyzing data external to a trial to select and/or construct covariates. In addition, I will discuss how these metrics provide insight into the impacts of Heterogeneous Treatment Effects (HTEs) and strategic implications for sample size determination.
+
+2. The concept of a model budget and suggested rules of thumb to protect the validity of statistical inference when using covariate adjustment.
+
+3. Suggestions for constructing the working regression model.
+
+4. Accounting for stratified randomization.
+
+5. Finally, I will discuss covariate adjustment of longitudinal data with continuous outcomes.
+
