@@ -1,5 +1,5 @@
 ---
-title: "[Upcoming] A General Form of Covariate Adjustment in Randomized Clinical Trials"
+title: "A General Form of Covariate Adjustment in Randomized Clinical Trials"
 description: "May 2024 Journal Club"
 author: ""
 date: "05/10/2024"
