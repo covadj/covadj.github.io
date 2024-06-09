@@ -9,8 +9,37 @@
 <link>https://carswg.github.io/journal_club.html</link>
 <atom:link href="https://carswg.github.io/journal_club.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
-<generator>quarto-1.4.554</generator>
-<lastBuildDate>Fri, 10 May 2024 00:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.555</generator>
+<lastBuildDate>Fri, 14 Jun 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>[Upcoming] Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes</title>
+  <link>https://carswg.github.io/journalclub/journalclub4.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Topic:</strong> AStrategies for Practical and Effective Covariate Adjustment of Continuous Outcomes</p>
+<p><strong>Datetime: June 14th Friday, 11am-12pm EDT.</strong></p>
+<p><strong>Presenter:</strong> Michel Friesenhahn from Genentech</p>
+<p><strong>Zoom link:</strong>: https://umich.zoom.us/j/7573650566</p>
+<p><strong>Summary:</strong> There has been considerable research that has put covariate adjustment on firm footing, even for use in the primary analysis of confirmatory clinical trials. Several of my colleagues and I saw there was a need to explain the insights generated from this research and to distill them into simple and practical suggestions for implementation. Our recommendations for continuous outcomes when primary interest is in unconditional treatment effect estimands, such as Average Treatment Effects (ATEs), are written up in blog form (https://stats4datascience.com/posts/covariate_adjustment/).</p>
+<p>For this talk, I will discuss selected proposals from the blog that I think may be of particular interest to the working group, as well as potential areas for future work:</p>
+<ol type="1">
+<li><p>Performance metrics and their use in analyzing data external to a trial to select and/or construct covariates. In addition, I will discuss how these metrics provide insight into the impacts of Heterogeneous Treatment Effects (HTEs) and strategic implications for sample size determination.</p></li>
+<li><p>The concept of a model budget and suggested rules of thumb to protect the validity of statistical inference when using covariate adjustment.</p></li>
+<li><p>Suggestions for constructing the working regression model.</p></li>
+<li><p>Accounting for stratified randomization.</p></li>
+<li><p>Finally, I will discuss covariate adjustment of longitudinal data with continuous outcomes.</p></li>
+</ol>
+
+
+
+ ]]></description>
+  <category>journal club</category>
+  <guid>https://carswg.github.io/journalclub/journalclub4.html</guid>
+  <pubDate>Fri, 14 Jun 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>[Upcoming] A General Form of Covariate Adjustment in Randomized Clinical Trials</title>
   <link>https://carswg.github.io/journalclub/journalclub3.html</link>
