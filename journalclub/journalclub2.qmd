@@ -1,6 +1,6 @@
 ---
 title: "Variance Estimation for G-computation with Binary Outcomes"
-description: "April 2024 Journal Club"
+description: "April 2024 Journal Club by Dominic Magirr"
 author: ""
 date: "04/12/2024"
 draft: false
