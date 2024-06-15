@@ -1,6 +1,6 @@
 ---
 title: "Discussion on the FDA Guidance for Covariate Adjustment"
-description: "March 2024 Journal Club"
+description: "March 2024 Journal Club by Frank Bretz, Daniel Rubin, and Ting Ye"
 author: ""
 date: "03/15/2024"
 draft: false
