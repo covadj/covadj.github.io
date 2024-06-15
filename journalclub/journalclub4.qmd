@@ -1,6 +1,6 @@
 ---
-title: "[Upcoming] Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes"
-description: "June 2024 Journal Club"
+title: "Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes"
+description: "June 2024 Journal Club by Michel Friesenhahn"
 author: ""
 date: "06/14/2024"
 draft: false
@@ -29,4 +29,30 @@ For this talk, I will discuss selected proposals from the blog that I think may 
 4. Accounting for stratified randomization.
 
 5. Finally, I will discuss covariate adjustment of longitudinal data with continuous outcomes.
+
+
+**Recording:** 
+```{=html}
+<iframe src="https://drive.google.com/file/d/13_lHEYOOG_8PGRZ43GmP2O7OkMrDXDVq/preview" width="640" height="480" allowfullscreen="true" allow="autoplay"></iframe>
+```
+
+**Slides:** https://drive.google.com/file/d/1ST83aTvH0A40KNusQ6-dg3IqdH3uaN5O/view?usp=drive_link
+
+```{=html}
+<script src="https://giscus.app/client.js"
+        data-repo="carswg/carswg.github.io"
+        data-repo-id="R_kgDOLX8xOg"
+        data-category="General"
+        data-category-id="DIC_kwDOLX8xOs4CeZQB"
+        data-mapping="title"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light_high_contrast"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+```
 
