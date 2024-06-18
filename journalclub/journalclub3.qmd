@@ -1,6 +1,6 @@
 ---
 title: "A General Form of Covariate Adjustment in Randomized Clinical Trials"
-description: "May 2024 Journal Club"
+description: "May 2024 Journal Club by Marlena Bannick"
 author: ""
 date: "05/10/2024"
 draft: false
