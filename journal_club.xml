@@ -9,7 +9,7 @@
 <link>https://carswg.github.io/journal_club.html</link>
 <atom:link href="https://carswg.github.io/journal_club.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
-<generator>quarto-1.4.555</generator>
+<generator>quarto-1.5.54</generator>
 <lastBuildDate>Fri, 14 Jun 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes</title>
