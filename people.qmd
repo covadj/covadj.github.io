@@ -20,36 +20,39 @@ title: "People"
 
 **Members**
 
-| First Name | Last Name   | Affiliation                                 |
-|------------|-------------|---------------------------------------------|
-| Alan       | Wu          | Beigene                                     |
-| Alexander  | Przybylski  | Novartis                                    |
-| Andreas    | Brandt      | BfArM                                       |
-| Bingkai    | Wang        | University of Michigan, Biostatistics       |
-| Bingying   | Xie         | AstraZeneca                                 |
-| Craig      | Wang        | Novartis                                    |
-| Daniel     | Rubin       | FDA                                         |
-| Devan      | Mehrotra    | Merck                                       |
-| Dominic    | Magirr      | Novartis                                    |
-| Dong       | Xi          | Gilead                                      |
-| Frank      | Bretz       | Novartis                                    |
-| Gregory    | Chen        | Merck                                       |
-| Hongfei    | Li          | Incyte                                      |
-| Jiajun     | Xu          | Johnson & Johnson                           |
-| Jiawei     | Wei         | Novartis                                    |
-| Jingyi     | Liu         | Eli Lilly                                   |
-| Jonathan   | Chipman     | University of Utah                          |
-| Jun        | Shao        | University of Wisconsin-Madison, Statistics |
-| Kelly Van  | Lancker     | Ghent University, Applied Math/CS/Stat      |
-| Ken        | Wu          | Beigene                                     |
-| Leiya      | Han         | PPD                                         |
-| Mark       | Baillie     | Novartis                                    |
-| Marlena    | Bannick     | University of Washington, Biostatistics     |
-| Mike       | Friesenhahn | Roche/GNE                                   |
-| Olga       | Kuznetsova  | Merck                                       |
-| Ray        | Lin         | Genentech                                   |
-| Ting       | Ye          | University of Washington, Biostatistics     |
-| Victoria   | Johnson     | GSK                                         |
-| Xin        | Zhang       | Pfizer                                      |
-| Yanyao     | Yi          | Eli Lilly                                   |
-| Yu         | Du          | Eli Lilly                                   |
+| First Name | Last Name    | Affiliation                                 |
+|------------|--------------|---------------------------------------------|
+| Alan       | Wu           | Beigene                                     |
+| Alex       | Sverdlov     | Novartis                                    |
+| Alexander  | Przybylski   | Novartis                                    |
+| Andreas    | Brandt       | BfArM                                       |
+| Bingkai    | Wang         | University of Michigan, Biostatistics       |
+| Bingying   | Xie          | AstraZeneca                                 |
+| Craig      | Wang         | Novartis                                    |
+| Daniel     | Rubin        | FDA                                         |
+| Devan      | Mehrotra     | Merck                                       |
+| Dominic    | Magirr       | Novartis                                    |
+| Dong       | Xi           | Gilead                                      |
+| Frank      | Bretz        | Novartis                                    |
+| Gregory    | Chen         | Merck                                       |
+| Hongfei    | Li           | Incyte                                      |
+| Jiajun     | Xu           | Johnson & Johnson                           |
+| Jiawei     | Wei          | Novartis                                    |
+| Jingyi     | Liu          | Eli Lilly                                   |
+| Jonathan   | Chipman      | University of Utah                          |
+| Jun        | Shao         | University of Wisconsin-Madison, Statistics |
+| Kelly Van  | Lancker      | Ghent University, Applied Math/CS/Stat      |
+| Ken        | Wu           | Beigene                                     |
+| Leiya      | Han          | PPD                                         |
+| Mark       | Baillie      | Novartis                                    |
+| Marlena    | Bannick      | University of Washington, Biostatistics     |
+| Mike       | Friesenhahn  | Roche/GNE                                   |
+| Olga       | Kuznetsova   | Merck                                       |
+| Ray        | Lin          | Genentech                                   |
+| Sarwar     | Mozumder     | AstraZeneca                                 |
+| Satrajit   | Roychoudhury | Pfizer                                      |
+| Ting       | Ye           | University of Washington, Biostatistics     |
+| Victoria   | Johnson      | GSK                                         |
+| Xin        | Zhang        | Pfizer                                      |
+| Yanyao     | Yi           | Eli Lilly                                   |
+| Yu         | Du           | Eli Lilly                                   |
