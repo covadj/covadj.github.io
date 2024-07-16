@@ -26,4 +26,4 @@ To become one of the standard R packages for the industry/regulatory on covariat
 
 **Co-leaders:** Dong Xi (Gilead), Yanyao Yi (Eli Lilly) and Liming Li (Roche)
 
-**Members:** Mark Baillie, Marlenda Bannick, Gregory Chen, Hongfei Li, Ray Lin, Dominic Magirr, Alexander Przybylski, Craig Wang, Jiawei Wei, Alan Wu, Bingying Xie, Jiajun Xu, Ting Ye, Xin Zhang
+**Members:** Mark Baillie, Marlenda Bannick, Gregory Chen, Hongfei Li, Ray Lin, Dominic Magirr, Alexander Przybylski, Alex Sverdlov, Craig Wang, Jiawei Wei, Alan Wu, Bingying Xie, Jiajun Xu, Ting Ye, Xin Zhang
