@@ -1,17 +1,17 @@
 [
   {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/website_launch.html"
+    ]
+  },
+  {
     "listing": "/journal_club.html",
     "items": [
       "/journalclub/journalclub4.html",
       "/journalclub/journalclub3.html",
       "/journalclub/journalclub2.html",
       "/journalclub/journalclub1.html"
-    ]
-  },
-  {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/website_launch.html"
     ]
   }
 ]

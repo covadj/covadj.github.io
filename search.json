@@ -1,31 +1,38 @@
 [
   {
+    "objectID": "posts/website_launch.html",
+    "href": "posts/website_launch.html",
+    "title": "Welcome to ASA BIOP Covariate Adjustment SWG’s Webpage!",
+    "section": "",
+    "text": "Hello and welcome!\nWe’re excited to share the launch of the ASA BIOP Covariate Adjustment SWG website."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "“Covariate Adjustment SWG” is a scentific working group of the American Statistical Association (ASA) Biopharmaceutical section (BIOP)."
+  },
+  {
+    "objectID": "journalclub/journalclub2.html",
+    "href": "journalclub/journalclub2.html",
+    "title": "Variance Estimation for G-computation with Binary Outcomes",
+    "section": "",
+    "text": "Topic: Variance Estimation for G-computation with Binary Outcomes\nDatetime: April 12th Friday, 11am-12pm EDT.\nPresenter: Dominic Magirr from Novartis (20min presentation about comparisons of different methods)\nDiscussants: Daniel Rubin, Dong Xi, and Ting Ye (20min discussion).\nOpen-floor discussion: 20min.\nRecording:"
+  },
+  {
+    "objectID": "journalclub/journalclub1.html",
+    "href": "journalclub/journalclub1.html",
+    "title": "Discussion on the FDA Guidance for Covariate Adjustment",
+    "section": "",
+    "text": "Topic: Discussion on the FDA Guidance for Covariate Adjustment\nDatetime: March 15th Friday, 11am-12pm EDT\nHost: Bingkai Wang (UMich)\nDiscussants: Frank Bretz (Novartis), Daniel Rubin (FDA), and Ting Ye (UWashington)\nOpen-floor discussion: 20min.\nZoom link: https://upenn.zoom.us/j/4909817768\nRecording:"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "ASA-BIOP Covariate Adjustment SWG",
     "section": "",
     "text": "This is the home page of American Statistical Association (ASA) Biopharmaceutical Section (BIOP) Covariate Adjustment Scientific Working Group (SWG)."
-  },
-  {
-    "objectID": "journal_club.html",
-    "href": "journal_club.html",
-    "title": "ASA-BIOP Covariate Adjustment SWG",
-    "section": "",
-    "text": "The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:\n\nA roundtable where members delve into specific questions or issues they’ve encountered, and\nA seminar series featuring presentations on recent scholarly articles by our members or esteemed guest speakers.\n\nThese enriching sessions are held on the second Friday of every month, from 11 am to 12 pm EDT.\nWe warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at bingkai@umich.edu."
-  },
-  {
-    "objectID": "journal_club.html#journal-club",
-    "href": "journal_club.html#journal-club",
-    "title": "ASA-BIOP Covariate Adjustment SWG",
-    "section": "",
-    "text": "The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:\n\nA roundtable where members delve into specific questions or issues they’ve encountered, and\nA seminar series featuring presentations on recent scholarly articles by our members or esteemed guest speakers.\n\nThese enriching sessions are held on the second Friday of every month, from 11 am to 12 pm EDT.\nWe warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at bingkai@umich.edu."
-  },
-  {
-    "objectID": "journal_club.html#events",
-    "href": "journal_club.html#events",
-    "title": "ASA-BIOP Covariate Adjustment SWG",
-    "section": "Events",
-    "text": "Events"
   },
   {
     "objectID": "blog.html",
@@ -35,18 +42,11 @@
     "text": "Welcome to ASA BIOP Covariate Adjustment SWG’s Webpage!\n\n\n\n\n\n\n\n\n\n\n\nMar 6, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "journalclub/journalclub4.html",
-    "href": "journalclub/journalclub4.html",
-    "title": "Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes",
+    "objectID": "conference.html",
+    "href": "conference.html",
+    "title": "Events",
     "section": "",
-    "text": "Topic: AStrategies for Practical and Effective Covariate Adjustment of Continuous Outcomes\nDatetime: June 14th Friday, 11am-12pm EDT.\nPresenter: Michel Friesenhahn from Genentech\nZoom link:: https://umich.zoom.us/j/7573650566\nSummary: There has been considerable research that has put covariate adjustment on firm footing, even for use in the primary analysis of confirmatory clinical trials. Several of my colleagues and I saw there was a need to explain the insights generated from this research and to distill them into simple and practical suggestions for implementation. Our recommendations for continuous outcomes when primary interest is in unconditional treatment effect estimands, such as Average Treatment Effects (ATEs), are written up in blog form (https://stats4datascience.com/posts/covariate_adjustment/).\nFor this talk, I will discuss selected proposals from the blog that I think may be of particular interest to the working group, as well as potential areas for future work:\n\nPerformance metrics and their use in analyzing data external to a trial to select and/or construct covariates. In addition, I will discuss how these metrics provide insight into the impacts of Heterogeneous Treatment Effects (HTEs) and strategic implications for sample size determination.\nThe concept of a model budget and suggested rules of thumb to protect the validity of statistical inference when using covariate adjustment.\nSuggestions for constructing the working regression model.\nAccounting for stratified randomization.\nFinally, I will discuss covariate adjustment of longitudinal data with continuous outcomes.\n\nRecording:\n\nSlides: https://drive.google.com/file/d/1ST83aTvH0A40KNusQ6-dg3IqdH3uaN5O/view?usp=drive_link"
-  },
-  {
-    "objectID": "journalclub/journalclub3.html",
-    "href": "journalclub/journalclub3.html",
-    "title": "A General Form of Covariate Adjustment in Randomized Clinical Trials",
-    "section": "",
-    "text": "Topic: A General Form of Covariate Adjustment in Randomized Clinical Trials\nDatetime: May 10th Friday, 11am-12pm EDT.\nPresenter: Marlena Bannick from University of Washington\nRecording:\n\nPaper link: https://arxiv.org/abs/2306.10213"
+    "text": "This page intends to list all the conference presentation.\nUnder development"
   },
   {
     "objectID": "subteam_standardization.html",
@@ -61,41 +61,6 @@
     "title": "People",
     "section": "",
     "text": "Founders and co-chairs: Ye Ting (University of Washington) and Jingyi Liu (Eli Lily)\nAdvisor: Frank Bretz (Novartis), Dan Rubin (FDA), and Andreas Brandt (BfArM)\nSubteam co-leaders:\n\nEducation sub-team: Kelly Van Lancker (Ghent) and Dominic Magirr (Novartis)\nSoftware sub-team: Dong Xi (Gilead) and Yanyao Yi (Eli Lilly)\nStandardization and outreach sub-team: Yu Du (Eli Lilly)\nAdvancement sub-team: Bingkai Wang (University of Michigan)\n\nSecretary: Hongfei Li (Incyte)\n\nMembers\n\n\n\n\n\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlan\nWu\nBeigene\n\n\nAlex\nSverdlov\nNovartis\n\n\nAlexander\nPrzybylski\nNovartis\n\n\nAndreas\nBrandt\nBfArM\n\n\nBingkai\nWang\nUniversity of Michigan, Biostatistics\n\n\nBingying\nXie\nAstraZeneca\n\n\nCraig\nWang\nNovartis\n\n\nDaniel\nRubin\nFDA\n\n\nDevan\nMehrotra\nMerck\n\n\nDominic\nMagirr\nNovartis\n\n\nDong\nXi\nGilead\n\n\nFrank\nBretz\nNovartis\n\n\nGregory\nChen\nMerck\n\n\nHongfei\nLi\nIncyte\n\n\nJiajun\nXu\nJohnson & Johnson\n\n\nJiawei\nWei\nNovartis\n\n\nJingyi\nLiu\nEli Lilly\n\n\nJonathan\nChipman\nUniversity of Utah\n\n\nJun\nShao\nUniversity of Wisconsin-Madison, Statistics\n\n\nKelly Van\nLancker\nGhent University, Applied Math/CS/Stat\n\n\nKen\nWu\nBeigene\n\n\nLeiya\nHan\nPPD\n\n\nMark\nBaillie\nNovartis\n\n\nMarlena\nBannick\nUniversity of Washington, Biostatistics\n\n\nMike\nFriesenhahn\nRoche/GNE\n\n\nOlga\nKuznetsova\nMerck\n\n\nRay\nLin\nGenentech\n\n\nSarwar\nMozumder\nAstraZeneca\n\n\nSatrajit\nRoychoudhury\nPfizer\n\n\nTing\nYe\nUniversity of Washington, Biostatistics\n\n\nVictoria\nJohnson\nGSK\n\n\nXin\nZhang\nPfizer\n\n\nYanyao\nYi\nEli Lilly\n\n\nYu\nDu\nEli Lilly"
-  },
-  {
-    "objectID": "subteam_software.html",
-    "href": "subteam_software.html",
-    "title": "Software Subteam",
-    "section": "",
-    "text": "To develop and maintain an R package family on covariate adjustment for industry/regulatory/academia with the RobinCar verse (Robust estimation and Inference for Covariate Adjustment in Randomized clinical trials).\n\n\nTo become one of the most comprehensive libraries of existing and future methods on covariate adjustment.\n\nComprehensive coverage of methodologies\nDevelopment version of RobinCar2\n\n\n\n\nTo become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.\n\nA lite version of RobinCar in terms of methodology coverage\nA more rigorously validated and better documented version of RobinCar, suitable for the GxP environment"
-  },
-  {
-    "objectID": "subteam_software.html#robincar",
-    "href": "subteam_software.html#robincar",
-    "title": "Software Subteam",
-    "section": "",
-    "text": "To become one of the most comprehensive libraries of existing and future methods on covariate adjustment.\n\nComprehensive coverage of methodologies\nDevelopment version of RobinCar2"
-  },
-  {
-    "objectID": "subteam_software.html#robincar2",
-    "href": "subteam_software.html#robincar2",
-    "title": "Software Subteam",
-    "section": "",
-    "text": "To become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.\n\nA lite version of RobinCar in terms of methodology coverage\nA more rigorously validated and better documented version of RobinCar, suitable for the GxP environment"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "“Covariate Adjustment SWG” is a scentific working group of the American Statistical Association (ASA) Biopharmaceutical section (BIOP)."
-  },
-  {
-    "objectID": "posts/website_launch.html",
-    "href": "posts/website_launch.html",
-    "title": "Welcome to ASA BIOP Covariate Adjustment SWG’s Webpage!",
-    "section": "",
-    "text": "Hello and welcome!\nWe’re excited to share the launch of the ASA BIOP Covariate Adjustment SWG website."
   },
   {
     "objectID": "subteam_advancement.html",
@@ -119,31 +84,66 @@
     "text": "The online forum serves as a platform for group members to share news, discuss questions, and post resources. In the early stage, a simple Google doc will be used to realize this function, and a formal webpage will be developed later. Dr. Bingkai Wang will tentatively maintain the forum and draft monthly newsletters summarizing the discussions for all group members.\nWe anticipate an informal and friendly forum that puts no pressure in speaking and benefits all readers. The sub-team members are especially encouraged to post thoughts and responses through the forum, aiming to warm up the forum in the early stage.\nBeyond the two activities,we also encourage offline collaborations and connections. We believe the planned activities can be a valuable opportunity to nurture new thoughts, connections, and findings. As a working group gathering worldwide talents and experts of RCTs, we have no doubt on the potential value of this platform and look forward to its powerful impact on the community."
   },
   {
-    "objectID": "journalclub/journalclub1.html",
-    "href": "journalclub/journalclub1.html",
-    "title": "Discussion on the FDA Guidance for Covariate Adjustment",
-    "section": "",
-    "text": "Topic: Discussion on the FDA Guidance for Covariate Adjustment\nDatetime: March 15th Friday, 11am-12pm EDT\nHost: Bingkai Wang (UMich)\nDiscussants: Frank Bretz (Novartis), Daniel Rubin (FDA), and Ting Ye (UWashington)\nOpen-floor discussion: 20min.\nZoom link: https://upenn.zoom.us/j/4909817768\nRecording:"
-  },
-  {
-    "objectID": "journalclub/journalclub2.html",
-    "href": "journalclub/journalclub2.html",
-    "title": "Variance Estimation for G-computation with Binary Outcomes",
-    "section": "",
-    "text": "Topic: Variance Estimation for G-computation with Binary Outcomes\nDatetime: April 12th Friday, 11am-12pm EDT.\nPresenter: Dominic Magirr from Novartis (20min presentation about comparisons of different methods)\nDiscussants: Daniel Rubin, Dong Xi, and Ting Ye (20min discussion).\nOpen-floor discussion: 20min.\nRecording:"
-  },
-  {
-    "objectID": "conference.html",
-    "href": "conference.html",
-    "title": "Events",
-    "section": "",
-    "text": "This page intends to list all the conference presentation.\nUnder development"
-  },
-  {
     "objectID": "subteam_education.html",
     "href": "subteam_education.html",
     "title": "Education Subteam",
     "section": "",
     "text": "Aim and Plan\nThe goal of the education sub-team is to teach short-courses, develop tutorials and practical guidelines, and collect real case studies.\nTo reach these goals, the education sub-team plans different kinds of activities for 2024:\n\nMonthly meeting (first Monday of the month).\nMake short-course material that will mainly be used to teach short-courses from November 2024 onwards.\nA workshop (e.g., of 90min) on intro to covariate adjustment (November 2024).\n2-3 online blog posts on covariate adjustment. These blog posts will also be disseminated through LinkedIn.\nCollect possible case studies which can be used for tutorials.\n\n\n\nPeople\nCo-leaders: Kelly Van Lancker (Ghent University) and Dominic Magirr (Novartis)\nMembers: Ting Ye, Daniel Rubin, Yanyao Yi, Yu Du, Dong Xi, Hongfei Li, Devan Mehrotra, Andreas Brandt, Olga Kuznetsova, Victoria Johnson, Alex Sverdlov"
+  },
+  {
+    "objectID": "journal_club.html",
+    "href": "journal_club.html",
+    "title": "ASA-BIOP Covariate Adjustment SWG",
+    "section": "",
+    "text": "The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:\n\nA roundtable where members delve into specific questions or issues they’ve encountered, and\nA seminar series featuring presentations on recent scholarly articles by our members or esteemed guest speakers.\n\nThese enriching sessions are held on the second Friday of every month, from 11 am to 12 pm EDT.\nWe warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at bingkai@umich.edu."
+  },
+  {
+    "objectID": "journal_club.html#journal-club",
+    "href": "journal_club.html#journal-club",
+    "title": "ASA-BIOP Covariate Adjustment SWG",
+    "section": "",
+    "text": "The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:\n\nA roundtable where members delve into specific questions or issues they’ve encountered, and\nA seminar series featuring presentations on recent scholarly articles by our members or esteemed guest speakers.\n\nThese enriching sessions are held on the second Friday of every month, from 11 am to 12 pm EDT.\nWe warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at bingkai@umich.edu."
+  },
+  {
+    "objectID": "journal_club.html#events",
+    "href": "journal_club.html#events",
+    "title": "ASA-BIOP Covariate Adjustment SWG",
+    "section": "Events",
+    "text": "Events"
+  },
+  {
+    "objectID": "subteam_software.html",
+    "href": "subteam_software.html",
+    "title": "Software Subteam",
+    "section": "",
+    "text": "To develop and maintain an R package family on covariate adjustment for industry/regulatory/academia with the RobinCar verse (Robust estimation and Inference for Covariate Adjustment in Randomized clinical trials).\n\n\nTo become one of the most comprehensive libraries of existing and future methods on covariate adjustment.\n\nComprehensive coverage of methodologies\nDevelopment version of RobinCar2\n\n\n\n\nTo become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.\n\nA lite version of RobinCar in terms of methodology coverage\nA more rigorously validated and better documented version of RobinCar, suitable for the GxP environment"
+  },
+  {
+    "objectID": "subteam_software.html#robincar",
+    "href": "subteam_software.html#robincar",
+    "title": "Software Subteam",
+    "section": "",
+    "text": "To become one of the most comprehensive libraries of existing and future methods on covariate adjustment.\n\nComprehensive coverage of methodologies\nDevelopment version of RobinCar2"
+  },
+  {
+    "objectID": "subteam_software.html#robincar2",
+    "href": "subteam_software.html#robincar2",
+    "title": "Software Subteam",
+    "section": "",
+    "text": "To become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.\n\nA lite version of RobinCar in terms of methodology coverage\nA more rigorously validated and better documented version of RobinCar, suitable for the GxP environment"
+  },
+  {
+    "objectID": "journalclub/journalclub3.html",
+    "href": "journalclub/journalclub3.html",
+    "title": "A General Form of Covariate Adjustment in Randomized Clinical Trials",
+    "section": "",
+    "text": "Topic: A General Form of Covariate Adjustment in Randomized Clinical Trials\nDatetime: May 10th Friday, 11am-12pm EDT.\nPresenter: Marlena Bannick from University of Washington\nRecording:\n\nPaper link: https://arxiv.org/abs/2306.10213"
+  },
+  {
+    "objectID": "journalclub/journalclub4.html",
+    "href": "journalclub/journalclub4.html",
+    "title": "Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes",
+    "section": "",
+    "text": "Topic: AStrategies for Practical and Effective Covariate Adjustment of Continuous Outcomes\nDatetime: June 14th Friday, 11am-12pm EDT.\nPresenter: Michel Friesenhahn from Genentech\nZoom link:: https://umich.zoom.us/j/7573650566\nSummary: There has been considerable research that has put covariate adjustment on firm footing, even for use in the primary analysis of confirmatory clinical trials. Several of my colleagues and I saw there was a need to explain the insights generated from this research and to distill them into simple and practical suggestions for implementation. Our recommendations for continuous outcomes when primary interest is in unconditional treatment effect estimands, such as Average Treatment Effects (ATEs), are written up in blog form (https://stats4datascience.com/posts/covariate_adjustment/).\nFor this talk, I will discuss selected proposals from the blog that I think may be of particular interest to the working group, as well as potential areas for future work:\n\nPerformance metrics and their use in analyzing data external to a trial to select and/or construct covariates. In addition, I will discuss how these metrics provide insight into the impacts of Heterogeneous Treatment Effects (HTEs) and strategic implications for sample size determination.\nThe concept of a model budget and suggested rules of thumb to protect the validity of statistical inference when using covariate adjustment.\nSuggestions for constructing the working regression model.\nAccounting for stratified randomization.\nFinally, I will discuss covariate adjustment of longitudinal data with continuous outcomes.\n\nRecording:\n\nSlides: https://drive.google.com/file/d/1ST83aTvH0A40KNusQ6-dg3IqdH3uaN5O/view?usp=drive_link"
   }
 ]
