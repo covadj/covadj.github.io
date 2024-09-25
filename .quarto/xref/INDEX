@@ -70,5 +70,14 @@
   },
   "journalclub/journalclub3.qmd": {
     "journalclub3.html": "860b117a"
+  },
+  "journalclub/journalclub4.qmd": {
+    "journalclub4.html": "010329d8"
+  },
+  "journalclub/journalclub5.qmd": {
+    "journalclub5.html": "ed556eb9"
+  },
+  "posts/blog_linear_model.qmd": {
+    "blog_linear_model.html": "3d8ddae7"
   }
 }
