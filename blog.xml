@@ -10,7 +10,561 @@
 <atom:link href="https://carswg.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Wed, 06 Mar 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 24 Sep 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Covariate Adjustment for Linear Models: Understanding FDA Advice on Standard Errors</title>
+  <dc:creator>ASA Covariate Adjustment Working Group Education Subteam</dc:creator>
+  <link>https://carswg.github.io/posts/blog_linear_model.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p>Please see the website https://carswg.github.io/ for information about the ASA Covariate Adjustment Working Group.</p>
+<section id="prior-reading" class="level1">
+<h1>Prior reading</h1>
+<p>The blogpost <a href="https://stats4datascience.com/posts/covariate_adjustment/">How to get the most out of prognostic baseline variables in clinical trial</a> by Courtney Schiffman, Michel Friesenhahn, and Christina Rabe is an excellent starting point for learning about modern methods of covariate adjustment and their practical implementation. The post focuses on linear models and covers most important aspects.</p>
+<p>One area that might benefit from further explanation is variance estimation. The post suggests “using robust standard error estimators from the targeted maximum likelihood estimation (TMLE) literature”. Analytic formulas and R code are included in a straightforward way with references to the literature (Rosenblum and van der Laan, 2010). Nevertheless, it may be helpful to add some more intuitive explanation.</p>
+</section>
+<section id="goal-for-this-blogpost" class="level1">
+<h1>Goal for this blogpost</h1>
+<p>The <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/adjusting-covariates-randomized-clinical-trials-drugs-and-biological-products">FDA (2023) guidance document on covariate adjustment</a> contains the following paragraph in the section on linear models:</p>
+<p><strong>Nominal standard errors are often the default method in most statistical software packages. Even if the model is incorrectly specified, they are acceptable in two arm trials with 1:1 randomization. However, in other settings, these standard errors can be inaccurate when the model is misspecified. Therefore, the Agency recommends that sponsors consider use of a robust standard error method such as the Huber-White ???sandwich??? standard error when the model does not include treatment by covariate interactions (Rosenblum and van der Laan 2009; Lin 2013). Other robust standard error methods proposed in the literature can also cover cases with interactions (Ye et al.&nbsp;2022). An appropriate nonparametric bootstrap procedure can also be used (Efron and Tibshirani 1993).</strong></p>
+<p>There is a lot to unpick in this short paragraph. The situation can be summarized in the following two-by-two table of recommended variance estimation methods.</p>
+<p><img src="https://carswg.github.io/posts/files_blog_linear_model/lm_two_by_two_ehw.PNG" class="img-fluid"></p>
+<p>This is what we mean by these terms:</p>
+<ul>
+<li><em>Model-based</em> – a.k.a. “nominal” standard errors. What is produced by default in <code>lm</code>. Assumes a linear model with homoscedastic error terms.</li>
+<li><em>Sandwich</em> – a.k.a. Eicker-Huber-White standard errors.</li>
+<li><em>Influence function</em> – variance estimation methods that are based on an estimator’s <a href="https://urldefense.com/v3/__https://economics.mit.edu/sites/default/files/publications/inf21_mar_27.pdf__;!!N3hqHg43uw!o5yA_o8iLzExQQ9Oxy2liAf_MXKGLGOE1oaPCaRgj7boCu766uTjubaaP9dpELk7H-MPn8bZq4Yfli9RPnTyH7amvn61NktOpg$"><em>influence function</em></a> . See, for example, Tsiatis et al., (2008), Moore and van der Laan (2009), Rosenblum and van der Laan (2010), Ye et al.&nbsp;(2022).</li>
+</ul>
+<p>The goal of this blogpost is to give an intuitive understanding for why this two-by-two table looks the way it does.</p>
+</section>
+<section id="assumptions-about-sampling-framework-and-estimands" class="level1">
+<h1>Assumptions about sampling framework and estimands</h1>
+<p>The two-by-two table makes assumptions about the sampling framework and target estimand. Namely, it assumes the superpopulation sampling framework with potential outcomes. That is, <img src="https://latex.codecogs.com/png.latex?(Y_i(1),%20Y_i(0),%20A_i,%20X_i)"> for <img src="https://latex.codecogs.com/png.latex?i=1,%5Cldots,N"> are i.i.d. random variables from joint distribution <img src="https://latex.codecogs.com/png.latex?f"> where treatment assignment <img src="https://latex.codecogs.com/png.latex?A_i"> is independent of the covariate and potential outcomes <img src="https://latex.codecogs.com/png.latex?X_i,%20Y_i(0),%20Y_i(1)">. The target of inference is <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0))">. Also we assume there is a sufficiently large sample size to rely on asymptotic results.</p>
+<p>In this blogpost, we will restrict attention to simple random sampling. Many clinical trials employ permuted block randomization, which would contradict the assumption we have just made that <img src="https://latex.codecogs.com/png.latex?(Y_i(1),%20Y_i(0),%20A_i,%20X_i)"> are i.i.d. While it’s possible to accommodate alternative randomization schemes (see e.g., Ye et al., 2022; Wang et al., 2023), we’ll stick to the simpler theory around simple random sampling. For justification, see the section on <a href="https://stats4datascience.com/posts/covariate_adjustment/#accounting-for-stratified-randomization">“Accounting for Stratified Randomization” by Schiffman, Friesenhahn and Rabe</a></p>
+<p>One potential alternative estimand would be the Conditional Average Treatment Effect at one specific covariate value, CATE(<img src="https://latex.codecogs.com/png.latex?x">), which is defined as <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0)%20%5Cmid%20X_i%20=%20x)">. A common approach to estimating CATE(<img src="https://latex.codecogs.com/png.latex?x">) is to assume a model of the form <img src="https://latex.codecogs.com/png.latex?Y_i%20=%20%5Cbeta_0%20+%20%5Cbeta_1A_i%20+%20%5Cbeta_2X_i%20+%20%5Cepsilon_i,"> in which case CATE(<img src="https://latex.codecogs.com/png.latex?x">) is equal to <img src="https://latex.codecogs.com/png.latex?%5Cbeta_1"> for all <img src="https://latex.codecogs.com/png.latex?x">. So the task reduces to estimating <img src="https://latex.codecogs.com/png.latex?%5Cbeta_1">. The Population Average Treatment Effect, <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0))">, is also equal to <img src="https://latex.codecogs.com/png.latex?%5Cbeta_1"> in this case.</p>
+<p>If the assumed model is wrong, the interpretation of <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_1"> (the usual least squares estimator) as a consistent estimator of <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0)%20%5Cmid%20X_i%20=%20x)"> is wrong – there is no reason in general for CATE(<img src="https://latex.codecogs.com/png.latex?x">) to be constant across different values of <img src="https://latex.codecogs.com/png.latex?x">. On the other hand, the interpretation of <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_1"> as a consistent estimator of <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0))"> remains correct (Van Lancker et al., 2024). This can be seen from the fact that <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_1%20%5Capprox%20%5Cbar%7BY%7D_1%20-%20%5Cbar%7BY%7D_0%20-%20%5Chat%7B%5Cbeta%7D_2(%5Cbar%7BX%7D_1%20-%20%5Cbar%7BX%7D_0)"> where <img src="https://latex.codecogs.com/png.latex?%5Cbar%7BY%7D_j"> and <img src="https://latex.codecogs.com/png.latex?%5Cbar%7BX%7D_j"> are the sample means of <img src="https://latex.codecogs.com/png.latex?Y"> and <img src="https://latex.codecogs.com/png.latex?X">, respectively, on treatment <img src="https://latex.codecogs.com/png.latex?j"> (see Appendix of Tsiatis et al., 2008), and <img src="https://latex.codecogs.com/png.latex?%5Cbar%7BX%7D_1%20-%20%5Cbar%7BX%7D_0"> being asymptotically zero.</p>
+<p>Sometimes, we may assume an outcome model that includes treatment-covariate interactions, <img src="https://latex.codecogs.com/png.latex?Y_i%20=%20%5Cbeta_0%20+%20%5Cbeta_1A_i%20+%20%5Cbeta_2X_i%20+%20%5Cbeta_3A_iX_i%20+%20%5Cepsilon_i."> In this case, if the true underlying model really does contain treatment-covariate interactions, then the estimand CATE(<img src="https://latex.codecogs.com/png.latex?x">) is not constant in <img src="https://latex.codecogs.com/png.latex?x">, which makes it somewhat unsuitable as an estimand for primary analysis in an RCT. One could, however, with a few extra steps, use this model to estimate <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0))">. One option is g-computation (or standardization), whereby we estimate <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1))"> by the average of the model based predictions when setting the treatment assignment to <img src="https://latex.codecogs.com/png.latex?1">,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cmu%7D(1)%20=%20%5Cfrac%7B1%7D%7BN%7D%20%5Csum_%7Bi%20=%201%7D%5EN%20%5Chat%7B%5Cbeta%7D_0%20+%20%5Chat%7B%5Cbeta%7D_1%20+%20%5Chat%7B%5Cbeta%7D_2X_i%20+%20%5Chat%7B%5Cbeta%7D_3X_i,"> and we estimate <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(0))"> similarly by setting the treatment assignment to <img src="https://latex.codecogs.com/png.latex?0">, <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cmu%7D(0)%20=%20%5Cfrac%7B1%7D%7BN%7D%20%5Csum_%7Bi%20=%201%7D%5EN%20%5Chat%7B%5Cbeta%7D_0%20+%20%5Chat%7B%5Cbeta%7D_2X_i."></p>
+<p>A possible estimator of <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0))"> is therefore,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cmu%7D(1)%20-%20%5Chat%7B%5Cmu%7D(0)%20=%20%5Chat%7B%5Cbeta%7D_1%20+%20%5Cbar%7BX%7D%5Chat%7B%5Cbeta%7D_3."></p>
+<p>Including treatment-covariate interaction terms in the outcome model is somewhat discouraged in <a href="https://www.ema.europa.eu/en/documents/scientific-guideline/guideline-adjustment-baseline-covariates-clinical-trials_en.pdf">an EMA guidance document from 2015</a> with the following statement.</p>
+<p><strong><em>If there is no reason to suspect an interaction between treatment and a covariate then the primary analysis should only include the main effects for treatment and covariate. Conversely, if a substantial treatment by covariate interaction is suspected at the design stage, then stratified randomisation and/or subgroup analyses should be pre-planned accordingly.</em></strong></p>
+<p>The blogpost <a href="https://stats4datascience.com/posts/covariate_adjustment/">How to get the most out of prognostic baseline variables in clinical trial</a> also recommends not to include such terms, but for a different reason. The experience of the authors is that adding such terms to a model does not typically lead to a meaningful increase in efficiency, and we need to be mindful of our “model budget”, that is, the allowable number of terms in a working model relative to the sample size before performance degrades.</p>
+<p>For a linear model with 1:1 randomization, under the sampling framework outlined above, there is no efficiency gain to be had from modelling treatment-covariate interactions even when these interactions are extremely large (Tsiatis, 2008). This possibly surprising fact deserves a separate blogpost.</p>
+<p>Nevertheless, the FDA guidance document is open to including such treatment-covariate interaction terms:</p>
+<p><strong><em>The linear model may include treatment by covariate interaction terms. However, when using this approach, the primary analysis can still be based on an estimate from the model of the average treatment effect (Tsiatis et al.&nbsp;2008; Ye et al.&nbsp;2021).</em></strong></p>
+</section>
+<section id="understanding-variance-estimation-recommendations-in-the-2x2-table." class="level1">
+<h1>Understanding variance estimation recommendations in the 2x2 table.</h1>
+<section id="treatment-by-covariate-interactions" class="level2">
+<h2 class="anchored" data-anchor-id="treatment-by-covariate-interactions">Treatment by covariate interactions</h2>
+<p>To understand the right hand column of the two-by-two table, where neither the model-based nor the sandwich estimator would be recommended, we can stay within the framework of a correctly specified working model, <img src="https://latex.codecogs.com/png.latex?Y_i%20=%20%5Cbeta_0%20+%20%5Cbeta_1A_i%20+%20%5Cbeta_2X_i%20+%20%5Cbeta_3A_iX_i%20+%20%5Cepsilon_i,"></p>
+<p>where <img src="https://latex.codecogs.com/png.latex?%5Cepsilon_i%20%5Csim%20N(0,%20%5Csigma%5E2)">. At the moment, we are assuming that this model is correctly specified in the sense of having the correct <em>mean model</em> <img src="https://latex.codecogs.com/png.latex?E(Y_i%5Cmid%20A_i,%20X_i)%20=%20%5Cbeta_0%20+%20%5Cbeta_1A_i%20+%20%5Cbeta_2X_i%20+%20%5Cbeta_3A_iX_i">, in the sense of having the correct <em>variance model</em> <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%7Bvar%7D(Y_i%5Cmid%20A_i,%20X_i)%20=%20%5Csigma%5E2">, and also in the sense of having the correct distribution. These assumptions will be relaxed later in the post.</p>
+<p>The first important point is that the parameter <img src="https://latex.codecogs.com/png.latex?%5Cbeta_1"> does not in general correspond to <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0))">, so we cannot simply report the maximum likelihood estimate <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_1">. To use the working model to estimate <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0))">, one option is g-computation (or standardization). As described above, this produces an estimator <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_1%20+%20%5Cbar%7BX%7D%5Chat%7B%5Cbeta%7D_3">.</p>
+<p>The question remains how do we estimate <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1%20+%20%5Cbar%7BX%7D%5Chat%7B%5Cbeta%7D_3)">?</p>
+<section id="law-of-total-variance" class="level3">
+<h3 class="anchored" data-anchor-id="law-of-total-variance">Law of total variance</h3>
+<p>The law of total variance (with a correctly specified mean model) says that</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cbegin%7Bequation%7D%0A%5Cbegin%7Bsplit%7D%0A%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1%20+%20%5Cbar%7BX%7D%5Chat%7B%5Cbeta%7D_3)%20&amp;=%20%20E%20%5Cleft%5Clbrace%20%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1%20+%20%5Cbar%7BX%7D%5Chat%7B%5Cbeta%7D_3%20%5Cmid%20%5Cunderline%7BA%7D,%20%5Cunderline%7BX%7D)%5Cright%5Crbrace%20+%20%5Cmathrm%7Bvar%7D%5Cleft%5Clbrace%20E(%5Chat%7B%5Cbeta%7D_1%20+%20%5Cbar%7BX%7D%5Chat%7B%5Cbeta%7D_3%5Cmid%20%5Cunderline%7BA%7D,%20%5Cunderline%7BX%7D)%20%5Cright%5Crbrace%5C%5C%20%20&amp;=%20%20%0AE%20%5Cleft%5Clbrace%20%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1%20+%20%5Cbar%7BX%7D%5Chat%7B%5Cbeta%7D_3%20%5Cmid%20%5Cunderline%7BA%7D,%20%5Cunderline%7BX%7D)%5Cright%5Crbrace%20+%20%5Cbeta_3%5E2%5Cmathrm%7Bvar%7D(%5Cbar%7BX%7D)%0A%5Cend%7Bsplit%7D%0A%5Cend%7Bequation%7D"></p>
+<p>Given our assumptions about the correctness of the working model, the first term, <img src="https://latex.codecogs.com/png.latex?E%5Cleft%5Clbrace%20%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1%20+%20%5Cbar%7BX%7D%5Chat%7B%5Cbeta%7D_3%20%5Cmid%20%5Cunderline%7BA%7D,%20%5Cunderline%7BX%7D)%5Cright%5Crbrace">, can be consistently estimated via</p>
+<p><img src="https://latex.codecogs.com/png.latex?(0%20~~~1%20~~~0%20~~~%5Cbar%7Bx%7D)%20%5Cwidehat%7B%5Cmathrm%7Bvar%7D%7D(%5Chat%7B%5Cbeta%7D%20%5Cmid%20%5Cunderline%7BA%7D=%20%5Cunderline%7Ba%7D,%20%5Cunderline%7BX%7D=%20%5Cunderline%7Bx%7D)%20%20%5Cleft(%20%5Cbegin%7Barray%7D%7Bc%7D%200%5C%5C%201%20%5C%5C0%20%5C%5C%20%5Cbar%7Bx%7D%20%5Cend%7Barray%7D%20%5Cright),%5Cqquad%5Cqquad(%5Cmathrm%7B1%7D)"> where <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7B%5Cmathrm%7Bvar%7D%7D(%5Chat%7B%5Cbeta%7D%20%5Cmid%20%5Cunderline%7BA%7D=%20%5Cunderline%7Ba%7D,%20%5Cunderline%7BX%7D=%20%5Cunderline%7Bx%7D)"> is either the standard model-based variance estimator for the maximum likelihood estimator of <img src="https://latex.codecogs.com/png.latex?%5Cbeta"> (as would typically be produced by default in standard software) in which case (1) represents the “model based” variance estimator in the two-by-two table above, or <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7B%5Cmathrm%7Bvar%7D%7D(%5Chat%7B%5Cbeta%7D%20%5Cmid%20%5Cunderline%7BA%7D=%20%5Cunderline%7Ba%7D,%20%5Cunderline%7BX%7D=%20%5Cunderline%7Bx%7D)"> is a sandwich estimator, in which case (1) represents the “sandwich” variance estimator in the two-by-two table. In either case, (1) ignores the second term in the law of total variance, <img src="https://latex.codecogs.com/png.latex?%5Cbeta_3%5E2%5Cmathrm%7Bvar%7D(%5Cbar%7BX%7D)">. This is the reason why it is not recommended. Alternative variance estimators based on influence functions, e.g., Tstiatis et al.&nbsp;(2008), Rosenblum and van der Laan (2010), Ye et al.&nbsp;(2022), do take account of this second term.</p>
+<p>We did not need to talk about misspecified working models in order to demonstrate why the “model-based” and “sandwich” variance estimators are not recommended when the working model contains treatment by covariate interactions. But it is worth saying at this point that the influence function methods remain asymptotically valid when the mean and/or variance model is misspecified.</p>
+</section>
+<section id="illustrative-example" class="level3">
+<h3 class="anchored" data-anchor-id="illustrative-example">Illustrative example</h3>
+<p>As a demonstration, we would need to simulate multiple (1000, say) trials from the working model above where there is a strong treatment by covariate interaction. For each simulated trial, we would record the estimate of the treatment effect, as well as the estimated variance of the treatment effect estimator according to the three different methods.</p>
+<p>We’ll use the influence function approach as implemented in Ye et al.&nbsp;(2022) using the R package <a href="https://cran.r-project.org/web/packages/RobinCar/index.html">{robincar}</a>, noting this is the same as previous versions (e.g., Tstiatis et al.&nbsp;(2008), Rosenblum and van der Laan (2010)).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(sandwich)</span>
+<span id="cb1-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">library</span>(RobinCar)</span>
+<span id="cb1-3"></span>
+<span id="cb1-4">sim_one_trial <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">function</span>(n){</span>
+<span id="cb1-5"></span>
+<span id="cb1-6">  a <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rbinom</span>(n, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>)</span>
+<span id="cb1-7">  x <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n)</span>
+<span id="cb1-8">  y <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span> <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> x <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> x <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rnorm</span>(n)</span>
+<span id="cb1-9">  dat <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">y=</span>y,<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">a=</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">factor</span>(a),<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">x=</span>x)</span>
+<span id="cb1-10">  </span>
+<span id="cb1-11">  </span>
+<span id="cb1-12">  fit <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">glm</span>(y <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">~</span> a <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> x, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">data =</span> dat)</span>
+<span id="cb1-13">  </span>
+<span id="cb1-14">  estimate <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">t</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(x))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%*%</span> fit<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>coefficients)</span>
+<span id="cb1-15">  model_based <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">t</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(x))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%*%</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">vcov</span>(fit) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%*%</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(x))</span>
+<span id="cb1-16">  sandwich <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">t</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(x))) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%*%</span> sandwich<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">vcovHC</span>(fit) <span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">%*%</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(x))</span>
+<span id="cb1-17">  ye <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> RobinCar<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">robincar_linear</span>(dat, </span>
+<span id="cb1-18">                                  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"a"</span>, </span>
+<span id="cb1-19">                                  <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"y"</span>, </span>
+<span id="cb1-20">                                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">covariate_cols =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"x"</span>, </span>
+<span id="cb1-21">                                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">adj_method =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ANHECOVA"</span>, </span>
+<span id="cb1-22">                                  <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">contrast_h =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"diff"</span>)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>contrast<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>varcov[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]</span>
+<span id="cb1-23">  </span>
+<span id="cb1-24">  <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">data.frame</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">estimate =</span> estimate,</span>
+<span id="cb1-25">             <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">model_based =</span> model_based, </span>
+<span id="cb1-26">             <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">sandwich =</span> sandwich, </span>
+<span id="cb1-27">             <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ye =</span> ye)</span>
+<span id="cb1-28">  </span>
+<span id="cb1-29">}</span>
+<span id="cb1-30"></span>
+<span id="cb1-31">results <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> purrr<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">::</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">map_df</span>(<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">rep</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">200</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1e3</span>), sim_one_trial)</span></code></pre></div>
+</div>
+<p>Empirically, the variance of the point estimates is…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">var</span>(results<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>estimate)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.02440746</code></pre>
+</div>
+</div>
+<p>We can see that the Ye et al.(2022) method is reasonably consistent with this…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(results<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>ye)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.02503825</code></pre>
+</div>
+</div>
+<p>…while this is not the case for the other two methods…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(results<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>model_based)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.02022407</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mean</span>(results<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">$</span>sandwich)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.0206597</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="homogeneous-working-model" class="level2">
+<h2 class="anchored" data-anchor-id="homogeneous-working-model">Homogeneous working model</h2>
+<p>We can now move on to the first column of the two-by-two table. In this case, suppose the working model is <img src="https://latex.codecogs.com/png.latex?Y_i%20=%20%5Cbeta_0%20+%20%5Cbeta_1A_i%20+%20%5Cbeta_2X_i%20+%20%5Cepsilon_i"> with <img src="https://latex.codecogs.com/png.latex?N(0,%20%5Csigma%5E2)">.</p>
+<p>If the mean model is correctly specified then it is clear that <img src="https://latex.codecogs.com/png.latex?%5Cbeta_1%20=%20E_f(Y_i(1)%20-%20Y_i(0))">. [Although it can also be shown via a lot of algebra (see e.g.&nbsp;the Appendix of Tsiatis et al.&nbsp;(2008)) that the maximum likelihood estimator <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_1"> is consistent for <img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0))"> even when the model is completely misspecified].</p>
+<p>The question now is how to estimate <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1)">?</p>
+<p>In contrast to the treatment-covariate interaction case, the law of total variance (with an assumption of a correctly specified mean model) now tells us that we can focus on estimating the conditional variance, <img src="https://latex.codecogs.com/png.latex?%0A%5Cbegin%7Bequation%7D%0A%5Cbegin%7Bsplit%7D%0A%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1)%20&amp;=%20%20E%20%5Cleft%5Clbrace%20%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1%20%20%5Cmid%20%5Cunderline%7BA%7D,%20%5Cunderline%7BX%7D)%5Cright%5Crbrace%20+%20%5Cmathrm%7Bvar%7D%5Cleft%5Clbrace%20E(%5Chat%7B%5Cbeta%7D_1%5Cmid%20%5Cunderline%7BA%7D,%20%5Cunderline%7BX%7D)%20%5Cright%5Crbrace%5C%5C%20%20&amp;=%20%20%0AE%20%5Cleft%5Clbrace%20%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1%20%20%5Cmid%20%5Cunderline%7BA%7D,%20%5Cunderline%7BX%7D)%5Cright%5Crbrace%20+%200.%0A%5Cend%7Bsplit%7D%0A%5Cend%7Bequation%7D%0A"></p>
+<p>There are two options: 1) a completely model-based approach, <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7B%5Cmathrm%7Bvar%7D%7D_M(%5Chat%7B%5Cbeta%7D_1%20%5Cmid%20%5Cunderline%7BA%7D=%20%5Cunderline%7Ba%7D,%20%5Cunderline%7BX%7D=%20%5Cunderline%7Bx%7D)">, as would typically be produced by default in standard software. Or, 2) the well known Huber-White (White, 1980) “sandwich” estimator, <img src="https://latex.codecogs.com/png.latex?%5Cwidehat%7B%5Cmathrm%7Bvar%7D%7D_S(%5Chat%7B%5Cbeta%7D_1%20%5Cmid%20%5Cunderline%7BA%7D=%20%5Cunderline%7Ba%7D,%20%5Cunderline%7BX%7D=%20%5Cunderline%7Bx%7D)">.</p>
+<p>If all the working model assumptions are satisfied, then both (1) and (2) are consistent estimators of <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1)">. We could put a provisional tick mark next to all methods in the left-hand column of the two-by-two table. To replace some of those ticks with crosses, we can consider what happens when the variance model in the working model is not correctly specified.</p>
+<section id="back-to-an-unadjusted-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="back-to-an-unadjusted-analysis">Back to an unadjusted analysis</h3>
+<p>Actually, we can make things even simpler for ourselves by considering an unadjusted analysis with working model <img src="https://latex.codecogs.com/png.latex?Y_i%20=%20%5Cbeta_0%20+%20%5Cbeta_1A_i%20+%20%5Cepsilon_i,%20%5Cqquad%20%5Cepsilon_i%20%5Csim%20N(0,%20%5Csigma%5E2)"> but where the true model is <img src="https://latex.codecogs.com/png.latex?Y_i%20=%20%5Cbeta_0%20+%20%5Cbeta_1A_i%20+%20%5Cepsilon_i,%20%5Cqquad%20%5Cepsilon_i%20%5Csim%20%5Cbegin%7Barray%7D%7Bc%7D%20N(0,%20%5Csigma_0%5E2),%20~~A_i%20=%200%20%5C%5CN(0,%20%5Csigma_1%5E2),%20~~A_i%20=%201%20%5Cend%7Barray%7D."> When using the misspecified working model, the maximum likelihood estimator for <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1%20%5Cmid%20%5Cunderline%7BA%7D%20=%20%5Cunderline%7Ba%7D)"> is</p>
+<p><img src="https://latex.codecogs.com/png.latex?v%5E%7B%5Cmathrm%7Bmiss%7D%7D%20=%5Cfrac%7B%5Chat%7B%5Csigma%7D%5E2%7D%7Bn_0%7D%20+%20%5Cfrac%7B%5Chat%7B%5Csigma%7D%5E2%7D%7Bn_1%7D."></p>
+<p>Substituting in</p>
+<p><img src="https://latex.codecogs.com/png.latex?%20%5Chat%7B%5Csigma%7D%5E2%20=%20%5Cfrac%7Bn_0%5Chat%7B%5Csigma%7D_0%5E2%20+%20n_1%5Chat%7B%5Csigma%7D_1%5E2%7D%7Bn_0%20+%20n_1%7D"> and rearranging yields</p>
+<p><img src="https://latex.codecogs.com/png.latex?v%5E%7B%5Cmathrm%7Bmiss%7D%7D%20=%20%5Cfrac%7B%5Chat%7B%5Csigma%7D_0%5E2%7D%7Bn_1%7D%20+%20%5Cfrac%7B%5Chat%7B%5Csigma%7D_1%5E2%7D%7Bn_0%7D,"> whereas when using the correct true model, the MLE based variance estimator is <img src="https://latex.codecogs.com/png.latex?v%5E%7B%5Cmathrm%7Btrue%7D%7D%20=%5Cfrac%7B%5Chat%7B%5Csigma%7D_0%5E2%7D%7Bn_0%7D%20+%20%5Cfrac%7B%5Chat%7B%5Csigma%7D_1%5E2%7D%7Bn_1%7D."> Obviously the two are equivalent under equal allocation, but this is not the case for unequal allocation. We can plot what happens to <img src="https://latex.codecogs.com/png.latex?v%5E%7B%5Cmathrm%7Bmiss%7D%7D%20%20/%20v%5E%7B%5Cmathrm%7Btrue%7D%7D"> as a function of <img src="https://latex.codecogs.com/png.latex?%5Csigma_0%20/%20%5Csigma_1"> for various choices of allocation ratio (Treatment 1: Treatment 0), e.g, 2:1, 1:1 and 1:2 randomization…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1">sigma_1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span></span>
+<span id="cb10-2">n_1 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span></span>
+<span id="cb10-3">sigma_0 <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">seq</span>(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.33</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">length =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>)</span>
+<span id="cb10-4">v_ratio <span class="ot" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">function</span>(n_0){(sigma_0<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>n_1<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span>sigma_1<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>n_0)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>(sigma_1<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>n_1<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span>sigma_0<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">^</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>n_0)}</span>
+<span id="cb10-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">plot</span>(sigma_0, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">v_ratio</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">n_0 =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">50</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">xlab =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sigma_0 / sigma_1"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">ylab =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"ratio of variance estimates"</span>)</span>
+<span id="cb10-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">points</span>(sigma_0, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">v_ratio</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">n_0 =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">100</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>)</span>
+<span id="cb10-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">points</span>(sigma_0, <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">v_ratio</span>(<span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">n_0 =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">200</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">type =</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"l"</span>, <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span>
+<span id="cb10-8"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">legend</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1.6</span>,<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2:1"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"1:1"</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"1:2"</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">lty =</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">c</span>(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>,<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>), <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">col =</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>)</span></code></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="https://carswg.github.io/posts/blog_linear_model_files/figure-html/unnamed-chunk-5-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>This shows, for example, that if the true variance on treatment 0 is larger than the true variance on treatment 1, and there are more patients on treatment 1, then the estimated model-based variance of <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_1"> based on the misspecified working model will underestimate the true variance of <img src="https://latex.codecogs.com/png.latex?%5Chat%7B%5Cbeta%7D_1">.</p>
+<p>This is the reason why we need to put a cross next to the model-based approach for non-1:1 randomization when using a homogeneous working model. But we can keep a provisional tick when using 1:1 randomization.</p>
+</section>
+<section id="what-about-the-sandwich-estimator" class="level3">
+<h3 class="anchored" data-anchor-id="what-about-the-sandwich-estimator">What about the sandwich estimator?</h3>
+<p>For an unadjusted analysis, the sandwich estimator for <img src="https://latex.codecogs.com/png.latex?%5Cmathrm%7Bvar%7D(%5Chat%7B%5Cbeta%7D_1)"> based on the misspecified working model is essentially equivalent to <img src="https://latex.codecogs.com/png.latex?v%5E%7B%5Cmathrm%7Btrue%7D%7D"> above. So for this particular example, the sandwich estimator would still work fine. We can keep a provisional tick mark next to the sandwich estimator for both 1:1 and non-1:1 randomization.</p>
+</section>
+</section>
+</section>
+<section id="summary-and-comment-on-misspecified-mean-models" class="level1">
+<h1>Summary and comment on misspecified mean models</h1>
+<p>In this blogpost, we have attempted to show why the two-by-two table of recommended variance estimators looks the way it does.</p>
+<p>We have been able to demonstrate clearly the reasons for all of the crosses in the two-by-two table. The ticks, however, are still provisional. We have only considered correctly-specifed models and one specific example where the only source of misspecification is an equal variance assumption.</p>
+<p>It turns out that the tick marks can stay even when the working mean model is misspecified (subject to some regularity conditions). Proving this level of robustness has been the subject of much impressive work (see the reference list below and <a href="https://thestatsgeek.com/2019/04/29/ancova-in-rcts-model-based-standard-errors-are-valid-even-under-misspecification/">a nice summary here</a>) and is beyond the scope of this blogpost.</p>
+</section>
+<section id="p.s.-more-alternative-estimands" class="level1">
+<h1>P.s. more alternative estimands</h1>
+<p>The above discussion takes for granted that the estimand is the unconditional expectation of the difference in sample means</p>
+<p><img src="https://latex.codecogs.com/png.latex?E_f(Y_i(1)%20-%20Y_i(0))%20=%20E_%7Bf%5EN%7D(%5Cbar%7BY%7D_1%20-%20%5Cbar%7BY%7D_0)">,</p>
+<p>where <img src="https://latex.codecogs.com/png.latex?f%5EN"> is the joint distribution of all <img src="https://latex.codecogs.com/png.latex?N"> individuals’ data.</p>
+<p>Another potential alternative estimand is the conditional expectation for the difference in sample means given the vector of baseline covariates,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bi=1%7D%5ENE_f(Y_i(1)%20-%20Y_i(0)%20%5Cmid%20X_i%20=%20x_i)%20=%20E_%7Bf%5EN%7D(%5Cbar%7BY%7D_1%20-%20%5Cbar%7BY%7D_0%20%5Cmid%20%5Cunderline%7BX%7D%20=%20%5Cunderline%7Bx%7D)">.</p>
+<p>This alternative estimand is discussed in the context of binary outcomes by <a href="https://doi.org/10.17605/OSF.IO/9MP58">Magirr et al.&nbsp;(2024)</a>. In this case, the recommendations for variance estimation would need to be changed, to reflect that the vector of baseline covariates is considered fixed.</p>
+<p>Yet another alternative estimand is the sample average treatment effect,</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7B1%7D%7BN%7D%5Csum_%7Bi=1%7D%5EN%20Y_i(1)%20-%20Y_i(0),"></p>
+<p>where <em>randomization inference</em> methods could be applied (Guo and Basse, 2023).</p>
+</section>
+<section id="references" class="level1">
+<h1>References</h1>
+<p>Efron, B and RJ Tibshirani, 1993, An Introduction to the Bootstrap, Boca Raton (FL): Chapman &amp; Hall.</p>
+<p>Rosenblum, M and MJ van der Laan, 2009, Using Regression Models to Analyze Randomized Trials: Asymptotically Valid Hypothesis Tests Despite Incorrectly Specified Models, Biometrics, 65(3):937-945.</p>
+<p>Lin W, 2013, Agnostic Notes on Regression Adjustments to Experimental Data: Reexamining Freedman???s Critique, Annals of Applied Statistics, 7(1):295-318.</p>
+<p>Ye, T, J Shao, Y Yi, and Q Zhao, 2022, Toward better practice Of Covariate Adjustment In Analyzing Randomized Clinical Trials, Journal of the American Statistical Association, doi: 10.1080/01621459.2022.2049278.</p>
+<p>Tsiatis, Anastasios A., et al.&nbsp;“Covariate adjustment for two???sample treatment comparisons in randomized clinical trials: a principled yet flexible approach.” Statistics in medicine 27.23 (2008): 4658-4677.</p>
+<p>White, Halbert. “A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity.” Econometrica: journal of the Econometric Society (1980): 817-838.</p>
+<p>Van Lancker, Kelly, Frank Bretz, and Oliver Dukes. “Covariate adjustment in randomized controlled trials: General concepts and practical considerations.” Clinical Trials (2024): 17407745241251568.</p>
+<p>Guo, Kevin, and Guillaume Basse. “The generalized oaxaca-blinder estimator.” Journal of the American Statistical Association 118.541 (2023): 524-536.</p>
+<p>Wang, B., Susukida, R., Mojtabai, R., Amin-Esmaeili, M., &amp; Rosenblum, M. (2023). Model-robust inference for clinical trials that improve precision by stratified randomization and covariate adjustment. Journal of the American Statistical Association, 118(542), 1152-1163</p>
+<script src="https://giscus.app/client.js" data-repo="carswg/carswg.github.io" data-repo-id="R_kgDOLX8xOg" data-category="General" data-category-id="DIC_kwDOLX8xOs4CeZQB" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light_high_contrast" data-lang="en" crossorigin="anonymous" async="">
+</script>
+
+
+</section>
+
+ ]]></description>
+  <guid>https://carswg.github.io/posts/blog_linear_model.html</guid>
+  <pubDate>Tue, 24 Sep 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Welcome to ASA BIOP Covariate Adjustment SWG’s Webpage!</title>
   <link>https://carswg.github.io/posts/website_launch.html</link>

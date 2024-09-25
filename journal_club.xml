@@ -10,7 +10,28 @@
 <atom:link href="https://carswg.github.io/journal_club.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Fri, 14 Jun 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 13 Sep 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Automated, efficient and model-free inference for randomized clinical trials via data-driven covariate adjustment</title>
+  <link>https://carswg.github.io/journalclub/journalclub5.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Topic:</strong> Automated, efficient and model-free inference for randomized clinical trials via data-driven covariate adjustment</p>
+<p><strong>Datetime: September 13th Friday, 11am-12pm EDT.</strong></p>
+<p><strong>Presenter:</strong> Kelly Van Lancker from Ghent University</p>
+<p><strong>Zoom link:</strong>: https://umich.zoom.us/j/7573650566</p>
+<p><strong>Summary:</strong> In May 2023, the U.S. Food and Drug Administration (FDA) released guidance for industry on “Adjustment for Covariates in Randomized Clinical Trials for Drugs and Biological Products”. Covariate adjustment is a statistical analysis method for improving precision and power in clinical trials by adjusting for pre-specified, prognostic baseline variables. Though recommended by the FDA and the European Medicines Agency (EMA), many trials do not exploit the available information in baseline variables or make use only of the baseline measurement of the outcome. This is likely (partly) due to the regulatory mandate to pre-specify baseline covariates for adjustment, leading to challenges in determining appropriate covariates and their functional forms. We will explore the potential of automated data-adaptive methods, such as machine learning algorithms, for covariate adjustment, addressing the challenge of pre-specification. Specifically, our approach allows the use of complex models or machine learning algorithms without compromising the interpretation or validity of the treatment effect estimate and its corresponding standard error, even in the presence of misspecified outcome working models. This contrasts the majority of competing works which assume correct model specification for the validity of standard errors. Our proposed estimators either necessitate ultra-sparsity in the outcome model (which can be relaxed by limiting the number of predictors in the model) or necessitate integration with sample splitting to enhance their performance. As such, we will arrive at simple estimators and standard errors for the marginal treatment effect in randomized clinical trials, which exploit data-adaptive outcome predictions based on prognostic baseline covariates, and have low (or no) bias in finite samples even when those predictions are themselves biased.</p>
+
+
+
+ ]]></description>
+  <category>journal club</category>
+  <guid>https://carswg.github.io/journalclub/journalclub5.html</guid>
+  <pubDate>Fri, 13 Sep 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes</title>
   <link>https://carswg.github.io/journalclub/journalclub4.html</link>

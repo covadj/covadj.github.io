@@ -7,39 +7,53 @@
     "text": "Topic: Variance Estimation for G-computation with Binary Outcomes\nDatetime: April 12th Friday, 11am-12pm EDT.\nPresenter: Dominic Magirr from Novartis (20min presentation about comparisons of different methods)\nDiscussants: Daniel Rubin, Dong Xi, and Ting Ye (20min discussion).\nOpen-floor discussion: 20min.\nRecording:"
   },
   {
-    "objectID": "journalclub/journalclub4.html",
-    "href": "journalclub/journalclub4.html",
-    "title": "Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes",
+    "objectID": "journalclub/journalclub1.html",
+    "href": "journalclub/journalclub1.html",
+    "title": "Discussion on the FDA Guidance for Covariate Adjustment",
     "section": "",
-    "text": "Topic: AStrategies for Practical and Effective Covariate Adjustment of Continuous Outcomes\nDatetime: June 14th Friday, 11am-12pm EDT.\nPresenter: Michel Friesenhahn from Genentech\nZoom link:: https://umich.zoom.us/j/7573650566\nSummary: There has been considerable research that has put covariate adjustment on firm footing, even for use in the primary analysis of confirmatory clinical trials. Several of my colleagues and I saw there was a need to explain the insights generated from this research and to distill them into simple and practical suggestions for implementation. Our recommendations for continuous outcomes when primary interest is in unconditional treatment effect estimands, such as Average Treatment Effects (ATEs), are written up in blog form (https://stats4datascience.com/posts/covariate_adjustment/).\nFor this talk, I will discuss selected proposals from the blog that I think may be of particular interest to the working group, as well as potential areas for future work:\n\nPerformance metrics and their use in analyzing data external to a trial to select and/or construct covariates. In addition, I will discuss how these metrics provide insight into the impacts of Heterogeneous Treatment Effects (HTEs) and strategic implications for sample size determination.\nThe concept of a model budget and suggested rules of thumb to protect the validity of statistical inference when using covariate adjustment.\nSuggestions for constructing the working regression model.\nAccounting for stratified randomization.\nFinally, I will discuss covariate adjustment of longitudinal data with continuous outcomes.\n\nRecording:\n\nSlides: https://drive.google.com/file/d/1ST83aTvH0A40KNusQ6-dg3IqdH3uaN5O/view?usp=drive_link"
+    "text": "Topic: Discussion on the FDA Guidance for Covariate Adjustment\nDatetime: March 15th Friday, 11am-12pm EDT\nHost: Bingkai Wang (UMich)\nDiscussants: Frank Bretz (Novartis), Daniel Rubin (FDA), and Ting Ye (UWashington)\nOpen-floor discussion: 20min.\nZoom link: https://upenn.zoom.us/j/4909817768\nRecording:"
   },
   {
-    "objectID": "journal_club.html",
-    "href": "journal_club.html",
-    "title": "ASA-BIOP Covariate Adjustment SWG",
+    "objectID": "journalclub/journalclub3.html",
+    "href": "journalclub/journalclub3.html",
+    "title": "A General Form of Covariate Adjustment in Randomized Clinical Trials",
     "section": "",
-    "text": "The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:\n\nA roundtable where members delve into specific questions or issues they’ve encountered, and\nA seminar series featuring presentations on recent scholarly articles by our members or esteemed guest speakers.\n\nThese enriching sessions are held on the second Friday of every month, from 11 am to 12 pm EDT.\nWe warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at bingkai@umich.edu."
+    "text": "Topic: A General Form of Covariate Adjustment in Randomized Clinical Trials\nDatetime: May 10th Friday, 11am-12pm EDT.\nPresenter: Marlena Bannick from University of Washington\nRecording:\n\nPaper link: https://arxiv.org/abs/2306.10213"
   },
   {
-    "objectID": "journal_club.html#journal-club",
-    "href": "journal_club.html#journal-club",
-    "title": "ASA-BIOP Covariate Adjustment SWG",
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
     "section": "",
-    "text": "The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:\n\nA roundtable where members delve into specific questions or issues they’ve encountered, and\nA seminar series featuring presentations on recent scholarly articles by our members or esteemed guest speakers.\n\nThese enriching sessions are held on the second Friday of every month, from 11 am to 12 pm EDT.\nWe warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at bingkai@umich.edu."
+    "text": "“Covariate Adjustment SWG” is a scentific working group of the American Statistical Association (ASA) Biopharmaceutical section (BIOP)."
   },
   {
-    "objectID": "journal_club.html#events",
-    "href": "journal_club.html#events",
-    "title": "ASA-BIOP Covariate Adjustment SWG",
-    "section": "Events",
-    "text": "Events"
+    "objectID": "subteam_software.html",
+    "href": "subteam_software.html",
+    "title": "Software Subteam",
+    "section": "",
+    "text": "To develop and maintain an R package family on covariate adjustment for industry/regulatory/academia with the RobinCar verse (Robust estimation and Inference for Covariate Adjustment in Randomized clinical trials).\n\n\nTo become one of the most comprehensive libraries of existing and future methods on covariate adjustment.\n\nComprehensive coverage of methodologies\nDevelopment version of RobinCar2\n\n\n\n\nTo become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.\n\nA lite version of RobinCar in terms of methodology coverage\nA more rigorously validated and better documented version of RobinCar, suitable for the GxP environment"
   },
   {
-    "objectID": "people.html",
-    "href": "people.html",
-    "title": "People",
+    "objectID": "subteam_software.html#robincar",
+    "href": "subteam_software.html#robincar",
+    "title": "Software Subteam",
     "section": "",
-    "text": "Founders and co-chairs: Ye Ting (University of Washington) and Jingyi Liu (Eli Lily)\nAdvisor: Frank Bretz (Novartis), Dan Rubin (FDA), and Andreas Brandt (BfArM)\nSubteam co-leaders:\n\nEducation sub-team: Kelly Van Lancker (Ghent) and Dominic Magirr (Novartis)\nSoftware sub-team: Dong Xi (Gilead) and Yanyao Yi (Eli Lilly)\nStandardization and outreach sub-team: Yu Du (Eli Lilly)\nAdvancement sub-team: Bingkai Wang (University of Michigan)\n\nSecretary: Hongfei Li (Incyte)\n\nMembers\n\n\n\n\n\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlan\nWu\nBeigene\n\n\nAlex\nSverdlov\nNovartis\n\n\nAlexander\nPrzybylski\nNovartis\n\n\nAndreas\nBrandt\nBfArM\n\n\nArjun\nSondhi\nFeinstein Institutes for Medical Research\n\n\nBingkai\nWang\nUniversity of Michigan, Biostatistics\n\n\nBingying\nXie\nAstraZeneca\n\n\nCraig\nWang\nNovartis\n\n\nDaniel\nRubin\nFDA\n\n\nDevan\nMehrotra\nMerck\n\n\nDominic\nMagirr\nNovartis\n\n\nDong\nXi\nGilead\n\n\nFrank\nBretz\nNovartis\n\n\nGregory\nChen\nMerck\n\n\nHongfei\nLi\nIncyte\n\n\nJiajun\nXu\nJohnson & Johnson\n\n\nJiawei\nWei\nNovartis\n\n\nJingyi\nLiu\nEli Lilly\n\n\nJonathan\nChipman\nUniversity of Utah\n\n\nJun\nShao\nUniversity of Wisconsin-Madison, Statistics\n\n\nKelly Van\nLancker\nGhent University, Applied Math/CS/Stat\n\n\nKen\nWu\nBeigene\n\n\nLeiya\nHan\nPPD\n\n\nMark\nBaillie\nNovartis\n\n\nMarlena\nBannick\nUniversity of Washington, Biostatistics\n\n\nMike\nFriesenhahn\nRoche/GNE\n\n\nOlga\nKuznetsova\nMerck\n\n\nRay\nLin\nGenentech\n\n\nSarwar\nMozumder\nAstraZeneca\n\n\nSatrajit\nRoychoudhury\nPfizer\n\n\nTing\nYe\nUniversity of Washington, Biostatistics\n\n\nVictoria\nJohnson\nGSK\n\n\nXin\nZhang\nPfizer\n\n\nYanyao\nYi\nEli Lilly\n\n\nYu\nDu\nEli Lilly"
+    "text": "To become one of the most comprehensive libraries of existing and future methods on covariate adjustment.\n\nComprehensive coverage of methodologies\nDevelopment version of RobinCar2"
+  },
+  {
+    "objectID": "subteam_software.html#robincar2",
+    "href": "subteam_software.html#robincar2",
+    "title": "Software Subteam",
+    "section": "",
+    "text": "To become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.\n\nA lite version of RobinCar in terms of methodology coverage\nA more rigorously validated and better documented version of RobinCar, suitable for the GxP environment"
+  },
+  {
+    "objectID": "posts/website_launch.html",
+    "href": "posts/website_launch.html",
+    "title": "Welcome to ASA BIOP Covariate Adjustment SWG’s Webpage!",
+    "section": "",
+    "text": "Hello and welcome!\nWe’re excited to share the launch of the ASA BIOP Covariate Adjustment SWG website."
   },
   {
     "objectID": "subteam_education.html",
@@ -95,55 +109,69 @@
     "href": "blog.html",
     "title": "Blogs",
     "section": "",
-    "text": "Welcome to ASA BIOP Covariate Adjustment SWG’s Webpage!\n\n\n\n\n\n\n\n\n\n\n\nMar 6, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "Covariate Adjustment for Linear Models: Understanding FDA Advice on Standard Errors\n\n\n\n\n\n\n\n\n\n\n\nSep 24, 2024\n\n\nASA Covariate Adjustment Working Group Education Subteam\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome to ASA BIOP Covariate Adjustment SWG’s Webpage!\n\n\n\n\n\n\n\n\n\n\n\nMar 6, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "posts/website_launch.html",
-    "href": "posts/website_launch.html",
-    "title": "Welcome to ASA BIOP Covariate Adjustment SWG’s Webpage!",
+    "objectID": "posts/blog_linear_model.html",
+    "href": "posts/blog_linear_model.html",
+    "title": "Covariate Adjustment for Linear Models: Understanding FDA Advice on Standard Errors",
     "section": "",
-    "text": "Hello and welcome!\nWe’re excited to share the launch of the ASA BIOP Covariate Adjustment SWG website."
+    "text": "Please see the website https://carswg.github.io/ for information about the ASA Covariate Adjustment Working Group."
   },
   {
-    "objectID": "subteam_software.html",
-    "href": "subteam_software.html",
-    "title": "Software Subteam",
-    "section": "",
-    "text": "To develop and maintain an R package family on covariate adjustment for industry/regulatory/academia with the RobinCar verse (Robust estimation and Inference for Covariate Adjustment in Randomized clinical trials).\n\n\nTo become one of the most comprehensive libraries of existing and future methods on covariate adjustment.\n\nComprehensive coverage of methodologies\nDevelopment version of RobinCar2\n\n\n\n\nTo become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.\n\nA lite version of RobinCar in terms of methodology coverage\nA more rigorously validated and better documented version of RobinCar, suitable for the GxP environment"
+    "objectID": "posts/blog_linear_model.html#treatment-by-covariate-interactions",
+    "href": "posts/blog_linear_model.html#treatment-by-covariate-interactions",
+    "title": "Covariate Adjustment for Linear Models: Understanding FDA Advice on Standard Errors",
+    "section": "Treatment by covariate interactions",
+    "text": "Treatment by covariate interactions\nTo understand the right hand column of the two-by-two table, where neither the model-based nor the sandwich estimator would be recommended, we can stay within the framework of a correctly specified working model, \\[Y_i = \\beta_0 + \\beta_1A_i + \\beta_2X_i + \\beta_3A_iX_i + \\epsilon_i,\\]\nwhere \\(\\epsilon_i \\sim N(0, \\sigma^2)\\). At the moment, we are assuming that this model is correctly specified in the sense of having the correct mean model \\(E(Y_i\\mid A_i, X_i) = \\beta_0 + \\beta_1A_i + \\beta_2X_i + \\beta_3A_iX_i\\), in the sense of having the correct variance model \\(\\mathrm{var}(Y_i\\mid A_i, X_i) = \\sigma^2\\), and also in the sense of having the correct distribution. These assumptions will be relaxed later in the post.\nThe first important point is that the parameter \\(\\beta_1\\) does not in general correspond to \\(E_f(Y_i(1) - Y_i(0))\\), so we cannot simply report the maximum likelihood estimate \\(\\hat{\\beta}_1\\). To use the working model to estimate \\(E_f(Y_i(1) - Y_i(0))\\), one option is g-computation (or standardization). As described above, this produces an estimator \\(\\hat{\\beta}_1 + \\bar{X}\\hat{\\beta}_3\\).\nThe question remains how do we estimate \\(\\mathrm{var}(\\hat{\\beta}_1 + \\bar{X}\\hat{\\beta}_3)\\)?\n\nLaw of total variance\nThe law of total variance (with a correctly specified mean model) says that\n\\[\\begin{equation}\n\\begin{split}\n\\mathrm{var}(\\hat{\\beta}_1 + \\bar{X}\\hat{\\beta}_3) &=  E \\left\\lbrace \\mathrm{var}(\\hat{\\beta}_1 + \\bar{X}\\hat{\\beta}_3 \\mid \\underline{A}, \\underline{X})\\right\\rbrace + \\mathrm{var}\\left\\lbrace E(\\hat{\\beta}_1 + \\bar{X}\\hat{\\beta}_3\\mid \\underline{A}, \\underline{X}) \\right\\rbrace\\\\  &=  \nE \\left\\lbrace \\mathrm{var}(\\hat{\\beta}_1 + \\bar{X}\\hat{\\beta}_3 \\mid \\underline{A}, \\underline{X})\\right\\rbrace + \\beta_3^2\\mathrm{var}(\\bar{X})\n\\end{split}\n\\end{equation}\\]\nGiven our assumptions about the correctness of the working model, the first term, \\(E\\left\\lbrace \\mathrm{var}(\\hat{\\beta}_1 + \\bar{X}\\hat{\\beta}_3 \\mid \\underline{A}, \\underline{X})\\right\\rbrace\\), can be consistently estimated via\n\\[(0 ~~~1 ~~~0 ~~~\\bar{x}) \\widehat{\\mathrm{var}}(\\hat{\\beta} \\mid \\underline{A}= \\underline{a}, \\underline{X}= \\underline{x})  \\left( \\begin{array}{c} 0\\\\ 1 \\\\0 \\\\ \\bar{x} \\end{array} \\right),\\qquad\\qquad(\\mathrm{1})\\] where \\(\\widehat{\\mathrm{var}}(\\hat{\\beta} \\mid \\underline{A}= \\underline{a}, \\underline{X}= \\underline{x})\\) is either the standard model-based variance estimator for the maximum likelihood estimator of \\(\\beta\\) (as would typically be produced by default in standard software) in which case (1) represents the “model based” variance estimator in the two-by-two table above, or \\(\\widehat{\\mathrm{var}}(\\hat{\\beta} \\mid \\underline{A}= \\underline{a}, \\underline{X}= \\underline{x})\\) is a sandwich estimator, in which case (1) represents the “sandwich” variance estimator in the two-by-two table. In either case, (1) ignores the second term in the law of total variance, \\(\\beta_3^2\\mathrm{var}(\\bar{X})\\). This is the reason why it is not recommended. Alternative variance estimators based on influence functions, e.g., Tstiatis et al. (2008), Rosenblum and van der Laan (2010), Ye et al. (2022), do take account of this second term.\nWe did not need to talk about misspecified working models in order to demonstrate why the “model-based” and “sandwich” variance estimators are not recommended when the working model contains treatment by covariate interactions. But it is worth saying at this point that the influence function methods remain asymptotically valid when the mean and/or variance model is misspecified.\n\n\nIllustrative example\nAs a demonstration, we would need to simulate multiple (1000, say) trials from the working model above where there is a strong treatment by covariate interaction. For each simulated trial, we would record the estimate of the treatment effect, as well as the estimated variance of the treatment effect estimator according to the three different methods.\nWe’ll use the influence function approach as implemented in Ye et al. (2022) using the R package {robincar}, noting this is the same as previous versions (e.g., Tstiatis et al. (2008), Rosenblum and van der Laan (2010)).\n\nlibrary(sandwich)\nlibrary(RobinCar)\n\nsim_one_trial &lt;- function(n){\n\n  a &lt;- rbinom(n, 1, 0.5)\n  x &lt;- rnorm(n)\n  y &lt;- 1 + a + x + a * x + rnorm(n)\n  dat &lt;- data.frame(y=y,a=factor(a),x=x)\n  \n  \n  fit &lt;- glm(y ~ a * x, data = dat)\n  \n  estimate &lt;- c(t(c(0, 1, 0, mean(x))) %*% fit$coefficients)\n  model_based &lt;- t(c(0, 1, 0, mean(x))) %*% vcov(fit) %*% c(0, 1, 0, mean(x))\n  sandwich &lt;- t(c(0, 1, 0, mean(x))) %*% sandwich::vcovHC(fit) %*% c(0, 1, 0, mean(x))\n  ye &lt;- RobinCar::robincar_linear(dat, \n                                  \"a\", \n                                  \"y\", \n                                  covariate_cols = \"x\", \n                                  adj_method = \"ANHECOVA\", \n                                  contrast_h = \"diff\")$contrast$varcov[1,1]\n  \n  data.frame(estimate = estimate,\n             model_based = model_based, \n             sandwich = sandwich, \n             ye = ye)\n  \n}\n\nresults &lt;- purrr::map_df(rep(200, 1e3), sim_one_trial)\n\nEmpirically, the variance of the point estimates is…\n\nvar(results$estimate)\n\n[1] 0.02440746\n\n\nWe can see that the Ye et al.(2022) method is reasonably consistent with this…\n\nmean(results$ye)\n\n[1] 0.02503825\n\n\n…while this is not the case for the other two methods…\n\nmean(results$model_based)\n\n[1] 0.02022407\n\nmean(results$sandwich)\n\n[1] 0.0206597"
   },
   {
-    "objectID": "subteam_software.html#robincar",
-    "href": "subteam_software.html#robincar",
-    "title": "Software Subteam",
-    "section": "",
-    "text": "To become one of the most comprehensive libraries of existing and future methods on covariate adjustment.\n\nComprehensive coverage of methodologies\nDevelopment version of RobinCar2"
+    "objectID": "posts/blog_linear_model.html#homogeneous-working-model",
+    "href": "posts/blog_linear_model.html#homogeneous-working-model",
+    "title": "Covariate Adjustment for Linear Models: Understanding FDA Advice on Standard Errors",
+    "section": "Homogeneous working model",
+    "text": "Homogeneous working model\nWe can now move on to the first column of the two-by-two table. In this case, suppose the working model is \\[Y_i = \\beta_0 + \\beta_1A_i + \\beta_2X_i + \\epsilon_i\\] with \\(N(0, \\sigma^2)\\).\nIf the mean model is correctly specified then it is clear that \\(\\beta_1 = E_f(Y_i(1) - Y_i(0))\\). [Although it can also be shown via a lot of algebra (see e.g. the Appendix of Tsiatis et al. (2008)) that the maximum likelihood estimator \\(\\hat{\\beta}_1\\) is consistent for \\(E_f(Y_i(1) - Y_i(0))\\) even when the model is completely misspecified].\nThe question now is how to estimate \\(\\mathrm{var}(\\hat{\\beta}_1)\\)?\nIn contrast to the treatment-covariate interaction case, the law of total variance (with an assumption of a correctly specified mean model) now tells us that we can focus on estimating the conditional variance, \\[\n\\begin{equation}\n\\begin{split}\n\\mathrm{var}(\\hat{\\beta}_1) &=  E \\left\\lbrace \\mathrm{var}(\\hat{\\beta}_1  \\mid \\underline{A}, \\underline{X})\\right\\rbrace + \\mathrm{var}\\left\\lbrace E(\\hat{\\beta}_1\\mid \\underline{A}, \\underline{X}) \\right\\rbrace\\\\  &=  \nE \\left\\lbrace \\mathrm{var}(\\hat{\\beta}_1  \\mid \\underline{A}, \\underline{X})\\right\\rbrace + 0.\n\\end{split}\n\\end{equation}\n\\]\nThere are two options: 1) a completely model-based approach, \\(\\widehat{\\mathrm{var}}_M(\\hat{\\beta}_1 \\mid \\underline{A}= \\underline{a}, \\underline{X}= \\underline{x})\\), as would typically be produced by default in standard software. Or, 2) the well known Huber-White (White, 1980) “sandwich” estimator, \\(\\widehat{\\mathrm{var}}_S(\\hat{\\beta}_1 \\mid \\underline{A}= \\underline{a}, \\underline{X}= \\underline{x})\\).\nIf all the working model assumptions are satisfied, then both (1) and (2) are consistent estimators of \\(\\mathrm{var}(\\hat{\\beta}_1)\\). We could put a provisional tick mark next to all methods in the left-hand column of the two-by-two table. To replace some of those ticks with crosses, we can consider what happens when the variance model in the working model is not correctly specified.\n\nBack to an unadjusted analysis\nActually, we can make things even simpler for ourselves by considering an unadjusted analysis with working model \\[Y_i = \\beta_0 + \\beta_1A_i + \\epsilon_i, \\qquad \\epsilon_i \\sim N(0, \\sigma^2)\\] but where the true model is \\[Y_i = \\beta_0 + \\beta_1A_i + \\epsilon_i, \\qquad \\epsilon_i \\sim \\begin{array}{c} N(0, \\sigma_0^2), ~~A_i = 0 \\\\N(0, \\sigma_1^2), ~~A_i = 1 \\end{array}.\\] When using the misspecified working model, the maximum likelihood estimator for \\(\\mathrm{var}(\\hat{\\beta}_1 \\mid \\underline{A} = \\underline{a})\\) is\n\\[v^{\\mathrm{miss}} =\\frac{\\hat{\\sigma}^2}{n_0} + \\frac{\\hat{\\sigma}^2}{n_1}.\\]\nSubstituting in\n\\[ \\hat{\\sigma}^2 = \\frac{n_0\\hat{\\sigma}_0^2 + n_1\\hat{\\sigma}_1^2}{n_0 + n_1}\\] and rearranging yields\n\\[v^{\\mathrm{miss}} = \\frac{\\hat{\\sigma}_0^2}{n_1} + \\frac{\\hat{\\sigma}_1^2}{n_0},\\] whereas when using the correct true model, the MLE based variance estimator is \\[v^{\\mathrm{true}} =\\frac{\\hat{\\sigma}_0^2}{n_0} + \\frac{\\hat{\\sigma}_1^2}{n_1}.\\] Obviously the two are equivalent under equal allocation, but this is not the case for unequal allocation. We can plot what happens to \\(v^{\\mathrm{miss}}  / v^{\\mathrm{true}}\\) as a function of \\(\\sigma_0 / \\sigma_1\\) for various choices of allocation ratio (Treatment 1: Treatment 0), e.g, 2:1, 1:1 and 1:2 randomization…\n\nsigma_1 &lt;- 1\nn_1 &lt;- 100\nsigma_0 &lt;- seq(0.33, 2, length = 100)\nv_ratio &lt;- function(n_0){(sigma_0^2/n_1+sigma_1^2/n_0)/(sigma_1^2/n_1+sigma_0^2/n_0)}\nplot(sigma_0, v_ratio(n_0 = 50), type = \"l\", xlab = \"sigma_0 / sigma_1\", ylab = \"ratio of variance estimates\")\npoints(sigma_0, v_ratio(n_0 = 100), type = \"l\", col = 2)\npoints(sigma_0, v_ratio(n_0 = 200), type = \"l\", col = 3)\nlegend(1,1.6,c(\"2:1\", \"1:1\", \"1:2\"), lty = c(1,1,1), col = 1:3)\n\n\n\n\n\n\n\n\nThis shows, for example, that if the true variance on treatment 0 is larger than the true variance on treatment 1, and there are more patients on treatment 1, then the estimated model-based variance of \\(\\hat{\\beta}_1\\) based on the misspecified working model will underestimate the true variance of \\(\\hat{\\beta}_1\\).\nThis is the reason why we need to put a cross next to the model-based approach for non-1:1 randomization when using a homogeneous working model. But we can keep a provisional tick when using 1:1 randomization.\n\n\nWhat about the sandwich estimator?\nFor an unadjusted analysis, the sandwich estimator for \\(\\mathrm{var}(\\hat{\\beta}_1)\\) based on the misspecified working model is essentially equivalent to \\(v^{\\mathrm{true}}\\) above. So for this particular example, the sandwich estimator would still work fine. We can keep a provisional tick mark next to the sandwich estimator for both 1:1 and non-1:1 randomization."
   },
   {
-    "objectID": "subteam_software.html#robincar2",
-    "href": "subteam_software.html#robincar2",
-    "title": "Software Subteam",
+    "objectID": "people.html",
+    "href": "people.html",
+    "title": "People",
     "section": "",
-    "text": "To become one of the standard R packages for the industry/regulatory on covariate adjustment Selected methods with rigorous validation and clear documentation for GxP compliance.\n\nA lite version of RobinCar in terms of methodology coverage\nA more rigorously validated and better documented version of RobinCar, suitable for the GxP environment"
+    "text": "Founders and co-chairs: Ye Ting (University of Washington) and Jingyi Liu (Eli Lily)\nAdvisor: Frank Bretz (Novartis), Dan Rubin (FDA), and Andreas Brandt (BfArM)\nSubteam co-leaders:\n\nEducation sub-team: Kelly Van Lancker (Ghent) and Dominic Magirr (Novartis)\nSoftware sub-team: Dong Xi (Gilead) and Yanyao Yi (Eli Lilly)\nStandardization and outreach sub-team: Yu Du (Eli Lilly)\nAdvancement sub-team: Bingkai Wang (University of Michigan)\n\nSecretary: Hongfei Li (Incyte)\n\nMembers\n\n\n\n\n\n\n\n\nFirst Name\nLast Name\nAffiliation\n\n\n\n\nAlan\nWu\nBeigene\n\n\nAlex\nSverdlov\nNovartis\n\n\nAlexander\nPrzybylski\nNovartis\n\n\nAndreas\nBrandt\nBfArM\n\n\nArjun\nSondhi\nFeinstein Institutes for Medical Research\n\n\nBingkai\nWang\nUniversity of Michigan, Biostatistics\n\n\nBingying\nXie\nAstraZeneca\n\n\nCraig\nWang\nNovartis\n\n\nDaniel\nRubin\nFDA\n\n\nDevan\nMehrotra\nMerck\n\n\nDominic\nMagirr\nNovartis\n\n\nDong\nXi\nGilead\n\n\nFrank\nBretz\nNovartis\n\n\nGregory\nChen\nMerck\n\n\nHongfei\nLi\nIncyte\n\n\nJiajun\nXu\nJohnson & Johnson\n\n\nJiawei\nWei\nNovartis\n\n\nJingyi\nLiu\nEli Lilly\n\n\nJonathan\nChipman\nUniversity of Utah\n\n\nJun\nShao\nUniversity of Wisconsin-Madison, Statistics\n\n\nKelly Van\nLancker\nGhent University, Applied Math/CS/Stat\n\n\nKen\nWu\nBeigene\n\n\nLeiya\nHan\nPPD\n\n\nMark\nBaillie\nNovartis\n\n\nMarlena\nBannick\nUniversity of Washington, Biostatistics\n\n\nMike\nFriesenhahn\nRoche/GNE\n\n\nOlga\nKuznetsova\nMerck\n\n\nRay\nLin\nGenentech\n\n\nSarwar\nMozumder\nAstraZeneca\n\n\nSatrajit\nRoychoudhury\nPfizer\n\n\nTing\nYe\nUniversity of Washington, Biostatistics\n\n\nVictoria\nJohnson\nGSK\n\n\nXin\nZhang\nPfizer\n\n\nYanyao\nYi\nEli Lilly\n\n\nYu\nDu\nEli Lilly"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "journal_club.html",
+    "href": "journal_club.html",
+    "title": "ASA-BIOP Covariate Adjustment SWG",
     "section": "",
-    "text": "“Covariate Adjustment SWG” is a scentific working group of the American Statistical Association (ASA) Biopharmaceutical section (BIOP)."
+    "text": "The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:\n\nA roundtable where members delve into specific questions or issues they’ve encountered, and\nA seminar series featuring presentations on recent scholarly articles by our members or esteemed guest speakers.\n\nThese enriching sessions are held on the second Friday of every month, from 11 am to 12 pm EDT.\nWe warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at bingkai@umich.edu."
   },
   {
-    "objectID": "journalclub/journalclub3.html",
-    "href": "journalclub/journalclub3.html",
-    "title": "A General Form of Covariate Adjustment in Randomized Clinical Trials",
+    "objectID": "journal_club.html#journal-club",
+    "href": "journal_club.html#journal-club",
+    "title": "ASA-BIOP Covariate Adjustment SWG",
     "section": "",
-    "text": "Topic: A General Form of Covariate Adjustment in Randomized Clinical Trials\nDatetime: May 10th Friday, 11am-12pm EDT.\nPresenter: Marlena Bannick from University of Washington\nRecording:\n\nPaper link: https://arxiv.org/abs/2306.10213"
+    "text": "The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:\n\nA roundtable where members delve into specific questions or issues they’ve encountered, and\nA seminar series featuring presentations on recent scholarly articles by our members or esteemed guest speakers.\n\nThese enriching sessions are held on the second Friday of every month, from 11 am to 12 pm EDT.\nWe warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at bingkai@umich.edu."
   },
   {
-    "objectID": "journalclub/journalclub1.html",
-    "href": "journalclub/journalclub1.html",
-    "title": "Discussion on the FDA Guidance for Covariate Adjustment",
+    "objectID": "journal_club.html#events",
+    "href": "journal_club.html#events",
+    "title": "ASA-BIOP Covariate Adjustment SWG",
+    "section": "Events",
+    "text": "Events"
+  },
+  {
+    "objectID": "journalclub/journalclub4.html",
+    "href": "journalclub/journalclub4.html",
+    "title": "Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes",
     "section": "",
-    "text": "Topic: Discussion on the FDA Guidance for Covariate Adjustment\nDatetime: March 15th Friday, 11am-12pm EDT\nHost: Bingkai Wang (UMich)\nDiscussants: Frank Bretz (Novartis), Daniel Rubin (FDA), and Ting Ye (UWashington)\nOpen-floor discussion: 20min.\nZoom link: https://upenn.zoom.us/j/4909817768\nRecording:"
+    "text": "Topic: AStrategies for Practical and Effective Covariate Adjustment of Continuous Outcomes\nDatetime: June 14th Friday, 11am-12pm EDT.\nPresenter: Michel Friesenhahn from Genentech\nZoom link:: https://umich.zoom.us/j/7573650566\nSummary: There has been considerable research that has put covariate adjustment on firm footing, even for use in the primary analysis of confirmatory clinical trials. Several of my colleagues and I saw there was a need to explain the insights generated from this research and to distill them into simple and practical suggestions for implementation. Our recommendations for continuous outcomes when primary interest is in unconditional treatment effect estimands, such as Average Treatment Effects (ATEs), are written up in blog form (https://stats4datascience.com/posts/covariate_adjustment/).\nFor this talk, I will discuss selected proposals from the blog that I think may be of particular interest to the working group, as well as potential areas for future work:\n\nPerformance metrics and their use in analyzing data external to a trial to select and/or construct covariates. In addition, I will discuss how these metrics provide insight into the impacts of Heterogeneous Treatment Effects (HTEs) and strategic implications for sample size determination.\nThe concept of a model budget and suggested rules of thumb to protect the validity of statistical inference when using covariate adjustment.\nSuggestions for constructing the working regression model.\nAccounting for stratified randomization.\nFinally, I will discuss covariate adjustment of longitudinal data with continuous outcomes.\n\nRecording:\n\nSlides: https://drive.google.com/file/d/1ST83aTvH0A40KNusQ6-dg3IqdH3uaN5O/view?usp=drive_link"
+  },
+  {
+    "objectID": "journalclub/journalclub5.html",
+    "href": "journalclub/journalclub5.html",
+    "title": "Automated, efficient and model-free inference for randomized clinical trials via data-driven covariate adjustment",
+    "section": "",
+    "text": "Topic: Automated, efficient and model-free inference for randomized clinical trials via data-driven covariate adjustment\nDatetime: September 13th Friday, 11am-12pm EDT.\nPresenter: Kelly Van Lancker from Ghent University\nZoom link:: https://umich.zoom.us/j/7573650566\nSummary: In May 2023, the U.S. Food and Drug Administration (FDA) released guidance for industry on “Adjustment for Covariates in Randomized Clinical Trials for Drugs and Biological Products”. Covariate adjustment is a statistical analysis method for improving precision and power in clinical trials by adjusting for pre-specified, prognostic baseline variables. Though recommended by the FDA and the European Medicines Agency (EMA), many trials do not exploit the available information in baseline variables or make use only of the baseline measurement of the outcome. This is likely (partly) due to the regulatory mandate to pre-specify baseline covariates for adjustment, leading to challenges in determining appropriate covariates and their functional forms. We will explore the potential of automated data-adaptive methods, such as machine learning algorithms, for covariate adjustment, addressing the challenge of pre-specification. Specifically, our approach allows the use of complex models or machine learning algorithms without compromising the interpretation or validity of the treatment effect estimate and its corresponding standard error, even in the presence of misspecified outcome working models. This contrasts the majority of competing works which assume correct model specification for the validity of standard errors. Our proposed estimators either necessitate ultra-sparsity in the outcome model (which can be relaxed by limiting the number of predictors in the model) or necessitate integration with sample splitting to enhance their performance. As such, we will arrive at simple estimators and standard errors for the marginal treatment effect in randomized clinical trials, which exploit data-adaptive outcome predictions based on prognostic baseline covariates, and have low (or no) bias in finite samples even when those predictions are themselves biased."
   }
 ]
