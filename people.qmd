@@ -26,6 +26,7 @@ title: "People"
 | Alex       | Sverdlov     | Novartis                                    |
 | Alexander  | Przybylski   | Novartis                                    |
 | Andreas    | Brandt       | BfArM                                       |
+| Arjun      | Sondhi       | Feinstein Institutes for Medical Research   |
 | Bingkai    | Wang         | University of Michigan, Biostatistics       |
 | Bingying   | Xie          | AstraZeneca                                 |
 | Craig      | Wang         | Novartis                                    |
