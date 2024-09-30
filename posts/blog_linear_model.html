@@ -303,7 +303,7 @@ window.Quarto = {
 <section id="goal-for-this-blogpost" class="level1">
 <h1>Goal for this blogpost</h1>
 <p>The <a href="https://www.fda.gov/regulatory-information/search-fda-guidance-documents/adjusting-covariates-randomized-clinical-trials-drugs-and-biological-products">FDA (2023) guidance document on covariate adjustment</a> contains the following paragraph in the section on linear models:</p>
-<p><strong>Nominal standard errors are often the default method in most statistical software packages. Even if the model is incorrectly specified, they are acceptable in two arm trials with 1:1 randomization. However, in other settings, these standard errors can be inaccurate when the model is misspecified. Therefore, the Agency recommends that sponsors consider use of a robust standard error method such as the Huber-White ???sandwich??? standard error when the model does not include treatment by covariate interactions (Rosenblum and van der Laan 2009; Lin 2013). Other robust standard error methods proposed in the literature can also cover cases with interactions (Ye et al.&nbsp;2022). An appropriate nonparametric bootstrap procedure can also be used (Efron and Tibshirani 1993).</strong></p>
+<p><strong>Nominal standard errors are often the default method in most statistical software packages. Even if the model is incorrectly specified, they are acceptable in two arm trials with 1:1 randomization. However, in other settings, these standard errors can be inaccurate when the model is misspecified. Therefore, the Agency recommends that sponsors consider use of a robust standard error method such as the Huber-White “sandwich” standard error when the model does not include treatment by covariate interactions (Rosenblum and van der Laan 2009; Lin 2013). Other robust standard error methods proposed in the literature can also cover cases with interactions (Ye et al.&nbsp;2022). An appropriate nonparametric bootstrap procedure can also be used (Efron and Tibshirani 1993).</strong></p>
 <p>There is a lot to unpick in this short paragraph. The situation can be summarized in the following two-by-two table of recommended variance estimation methods.</p>
 <p><img src="./files_blog_linear_model/lm_two_by_two_ehw.PNG" class="img-fluid"></p>
 <p>This is what we mean by these terms:</p>
@@ -393,25 +393,25 @@ E \left\lbrace \mathrm{var}(\hat{\beta}_1 + \bar{X}\hat{\beta}_3 \mid \underline
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">var</span>(results<span class="sc">$</span>estimate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.02440746</code></pre>
+<pre><code>[1] 0.02753465</code></pre>
 </div>
 </div>
 <p>We can see that the Ye et al.(2022) method is reasonably consistent with this…</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(results<span class="sc">$</span>ye)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.02503825</code></pre>
+<pre><code>[1] 0.02499644</code></pre>
 </div>
 </div>
 <p>…while this is not the case for the other two methods…</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(results<span class="sc">$</span>model_based)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.02022407</code></pre>
+<pre><code>[1] 0.02020404</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(results<span class="sc">$</span>sandwich)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.0206597</code></pre>
+<pre><code>[1] 0.02064523</code></pre>
 </div>
 </div>
 </section>
@@ -486,9 +486,9 @@ E \left\lbrace \mathrm{var}(\hat{\beta}_1  \mid \underline{A}, \underline{X})\ri
 <h1>References</h1>
 <p>Efron, B and RJ Tibshirani, 1993, An Introduction to the Bootstrap, Boca Raton (FL): Chapman &amp; Hall.</p>
 <p>Rosenblum, M and MJ van der Laan, 2009, Using Regression Models to Analyze Randomized Trials: Asymptotically Valid Hypothesis Tests Despite Incorrectly Specified Models, Biometrics, 65(3):937-945.</p>
-<p>Lin W, 2013, Agnostic Notes on Regression Adjustments to Experimental Data: Reexamining Freedman???s Critique, Annals of Applied Statistics, 7(1):295-318.</p>
+<p>Lin W, 2013, Agnostic Notes on Regression Adjustments to Experimental Data: Reexamining Freedman’s Critique, Annals of Applied Statistics, 7(1):295-318.</p>
 <p>Ye, T, J Shao, Y Yi, and Q Zhao, 2022, Toward better practice Of Covariate Adjustment In Analyzing Randomized Clinical Trials, Journal of the American Statistical Association, doi: 10.1080/01621459.2022.2049278.</p>
-<p>Tsiatis, Anastasios A., et al.&nbsp;“Covariate adjustment for two???sample treatment comparisons in randomized clinical trials: a principled yet flexible approach.” Statistics in medicine 27.23 (2008): 4658-4677.</p>
+<p>Tsiatis, Anastasios A., et al.&nbsp;“Covariate adjustment for two-sample treatment comparisons in randomized clinical trials: a principled yet flexible approach.” Statistics in medicine 27.23 (2008): 4658-4677.</p>
 <p>White, Halbert. “A heteroskedasticity-consistent covariance matrix estimator and a direct test for heteroskedasticity.” Econometrica: journal of the Econometric Society (1980): 817-838.</p>
 <p>Van Lancker, Kelly, Frank Bretz, and Oliver Dukes. “Covariate adjustment in randomized controlled trials: General concepts and practical considerations.” Clinical Trials (2024): 17407745241251568.</p>
 <p>Guo, Kevin, and Guillaume Basse. “The generalized oaxaca-blinder estimator.” Journal of the American Statistical Association 118.541 (2023): 524-536.</p>
