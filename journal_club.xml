@@ -10,7 +10,52 @@
 <atom:link href="https://carswg.github.io/journal_club.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Fri, 13 Sep 2024 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 08 Nov 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Adjustments with Many Regressors under Covariate-Adaptive Randomizations</title>
+  <link>https://carswg.github.io/journalclub/journalclub7.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Topic:</strong> Adjustments with Many Regressors under Covariate-Adaptive Randomizations</p>
+<p><strong>Datetime: November 8th Friday, 11am-12pm ET.</strong></p>
+<p><strong>Presenter:</strong> Yichong Zhang from Singapore Management University</p>
+<p><strong>Zoom link:</strong>: https://umich.zoom.us/j/7573650566</p>
+<p><strong>Summary:</strong> Our paper discovers a new trade-off of using regression adjustments (RAs) in causal inference under covariate-adaptive randomizations (CARs). On one hand, RAs can improve the efficiency of causal estimators by incorporating information from covariates that are not used in the randomization. On the other hand, RAs can degrade estimation efficiency due to their estimation errors, which are not asymptotically negligible when the number of regressors is of the same order as the sample size. Ignoring the estimation errors of RAs may result in serious over- rejection of causal inference under the null hypothesis. To address the issue, we construct a new ATE estimator by optimally linearly combining the estimators with and without RAs. We then develop a unified inference theory for this estimator under CARs. It has two features: (1) the Wald test based on it achieves the exact asymptotic size under the null hypothesis, regardless of whether the number of covariates is fixed or diverges no faster than the sample size; and (2) it guarantees weak efficiency improvement over estimators both with and without RAs.</p>
+
+
+
+ ]]></description>
+  <category>journal club</category>
+  <guid>https://carswg.github.io/journalclub/journalclub7.html</guid>
+  <pubDate>Fri, 08 Nov 2024 00:00:00 GMT</pubDate>
+</item>
+<item>
+  <title>Covariate-Adjusted Randomization Analyzed with Randomization-Based Inference</title>
+  <link>https://carswg.github.io/journalclub/journalclub6.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Topic:</strong> Covariate-Adjusted Randomization Analyzed with Randomization-Based Inference</p>
+<p><strong>Datetime: Oct 11th Friday, 11am-12pm EDT.</strong></p>
+<p><strong>Presenter:</strong> Jonathan Chipman from University of Utah</p>
+<p><strong>Zoom link:</strong>: https://umich.zoom.us/j/7573650566</p>
+<p><strong>Summary:</strong> Adjusting for covariates in the design and/or analysis can increase the efficiency of a randomized trial. While several model-based strategies for covariate adjustment have been developed—many of which can accommodate covariate-adjusted/adaptive randomization (CAR)—the potential benefits of CAR are less well understood, particularly regarding efficiency gains. Here, we examine the strengths and limitations of design-based covariate adjustment analyzed with randomization-based inference (i.e., CAR+RBI), review traditional and contemporary CAR methods, and provide a case study to assess the efficiency of CAR+RBI strategies. We ask the question: can adjusting for covariates only in the design be as powerful as adjusting for covariates only in the analysis?</p>
+<p>The case study uses data from the REACH trial (n=512, 12-month continuous outcome with 9 baseline covariates explaining 32% of the outcome variance). We compare the power of CAR+RBI strategies to detect a beneficial treatment effect against that of complete randomization, analyzed with a comparable covariate-adjusted linear model. In this case study, biased-coin minimization CAR+RBI strategies were the most powerful strategies, suggesting that covariate adjustment in the design can be as effective as model-based covariate adjustment. While these findings are case-specific and results may differ across studies, they highlight the importance of further CAR and RBI research and consideration of implementation barriers.</p>
+<p>This presentation summarizes the following paper, emphasizing the real-world application/case study.</p>
+<p>Chipman JJ, Mayberry L, Greevy RA Jr (2023). Rematching on-the-fly: Sequential matched randomization and a case for covariate-adjusted randomization. Stat Med, 42(22), 3981-3995.</p>
+
+
+
+ ]]></description>
+  <category>journal club</category>
+  <guid>https://carswg.github.io/journalclub/journalclub6.html</guid>
+  <pubDate>Fri, 11 Oct 2024 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Automated, efficient and model-free inference for randomized clinical trials via data-driven covariate adjustment</title>
   <link>https://carswg.github.io/journalclub/journalclub5.html</link>
