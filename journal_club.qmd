@@ -19,7 +19,9 @@ These enriching sessions are held on the **second Friday of every month, from 11
 We warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at [bingkai\@umich.edu](mailto:bingkai@umich.edu).
 
 ## Events
+
 <!-- List of Journal Club activity: -->
 
 <!-- 1.  Journal Club: Discussion on the FDA Guidance for Covariate Adjustment, 15 Mar 2024. [details](./posts/journalclub1.html) -->
+
 <!-- 2.  \[Upcoming\] Journal Club: Variance Estimation for G-computation with Binary Outcomes, 12 Apr 2024. [details](./posts/journalclub2.html) -->
