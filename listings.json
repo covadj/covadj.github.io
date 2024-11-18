@@ -1,12 +1,5 @@
 [
   {
-    "listing": "/blog.html",
-    "items": [
-      "/posts/blog_linear_model.html",
-      "/posts/website_launch.html"
-    ]
-  },
-  {
     "listing": "/journal_club.html",
     "items": [
       "/journalclub/journalclub7.html",
@@ -16,6 +9,13 @@
       "/journalclub/journalclub3.html",
       "/journalclub/journalclub2.html",
       "/journalclub/journalclub1.html"
+    ]
+  },
+  {
+    "listing": "/blog.html",
+    "items": [
+      "/posts/blog_linear_model.html",
+      "/posts/website_launch.html"
     ]
   }
 ]
