@@ -22,8 +22,11 @@
 <p><strong>Topic:</strong> Adjustments with Many Regressors under Covariate-Adaptive Randomizations</p>
 <p><strong>Datetime: November 8th Friday, 11am-12pm ET.</strong></p>
 <p><strong>Presenter:</strong> Yichong Zhang from Singapore Management University</p>
-<p><strong>Zoom link:</strong>: https://umich.zoom.us/j/7573650566</p>
 <p><strong>Summary:</strong> Our paper discovers a new trade-off of using regression adjustments (RAs) in causal inference under covariate-adaptive randomizations (CARs). On one hand, RAs can improve the efficiency of causal estimators by incorporating information from covariates that are not used in the randomization. On the other hand, RAs can degrade estimation efficiency due to their estimation errors, which are not asymptotically negligible when the number of regressors is of the same order as the sample size. Ignoring the estimation errors of RAs may result in serious over- rejection of causal inference under the null hypothesis. To address the issue, we construct a new ATE estimator by optimally linearly combining the estimators with and without RAs. We then develop a unified inference theory for this estimator under CARs. It has two features: (1) the Wald test based on it achieves the exact asymptotic size under the null hypothesis, regardless of whether the number of covariates is fixed or diverges no faster than the sample size; and (2) it guarantees weak efficiency improvement over estimators both with and without RAs.</p>
+<p><strong>Recording:</strong></p>
+<iframe src="https://drive.google.com/file/d/1AM77MOgbUCrUp-TDxPkJr9EkIVBxLC8o/preview" width="640" height="480" allowfullscreen="true" allow="autoplay"></iframe>
+<script src="https://giscus.app/client.js" data-repo="carswg/carswg.github.io" data-repo-id="R_kgDOLX8xOg" data-category="General" data-category-id="DIC_kwDOLX8xOs4CeZQB" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light_high_contrast" data-lang="en" crossorigin="anonymous" async="">
+</script>
 
 
 
