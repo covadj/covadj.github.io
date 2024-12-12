@@ -31,6 +31,7 @@ title: "People"
 | Bingying   | Xie          | AstraZeneca                                 |
 | Craig      | Wang         | Novartis                                    |
 | Daniel     | Rubin        | FDA                                         |
+| Darren     | Scott        | Astrazeneca                                         |
 | Devan      | Mehrotra     | Merck                                       |
 | Dominic    | Magirr       | Novartis                                    |
 | Dong       | Xi           | Gilead                                      |
