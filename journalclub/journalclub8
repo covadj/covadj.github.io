@@ -1,0 +1,41 @@
+---
+title: "RobinCar: An R Package for Robust Covariate Adjustment for Continuous, Discrete, and Time-to-Event Outcomes in Randomized Clinical Trials"
+description: "December 2024 Journal Club by Marlena Bannick"
+author: ""
+date: "12/13/2024"
+draft: false
+categories:
+  - journal club
+---
+
+**Topic:** RobinCar: An R Package for Robust Covariate Adjustment for Continuous, Discrete, and Time-to-Event Outcomes in Randomized Clinical Trials
+
+**Datetime: December 13th Friday, 11am-12pm ET.**
+
+**Presenter:** Marlena Bannick from University of Washington
+
+**Summary:** Covariate adjustment is a powerful technique that can improve efficiency when estimating treatment effects in randomized clinical trials. We develop a one-stop and user-friendly R package called RobinCar that allows clinical researchers to conveniently and robustly apply covariate adjustment. RobinCar covers covariate adjustment using linear and non-linear working models, and covariate adjustment for time-to-event outcomes. The guiding principles of RobinCar are to provide users with methods that (1) target the same estimand as the unadjusted analysis, (2) do not make any model assumptions beyond what is assumed for an unadjusted analysis, and (3) have robust variance estimation. Importantly, RobinCar takes into account the randomization scheme when constructing the variance estimate (including simple, stratified permuted block, and Pocock and Simon’s minimization). In this talk, we will give an overview of RobinCar, which will include a tour of the functions, and a brief description of the methodologies behind each of the functions. We will also include a discussion of RobinCar2, which is currently being developed by the Software sub-team of the ASA-BIOP Covariate Adjustment Scientific Working Group.
+**Recording:** 
+```{=html}
+<iframe src="https://drive.google.com/file/d/1nuGiDxcT4-DLs_WQtRHNg3emk3RKDQnm/preview" width="640" height="480" allowfullscreen="true" allow="autoplay"></iframe>
+```
+
+**Slides:** https://docs.google.com/presentation/d/1AiublzA9emaoucCmpqVTsr46c1WoHTAC/edit?usp=sharing&ouid=110697570386924275089&rtpof=true&sd=true
+
+```{=html}
+<script src="https://giscus.app/client.js"
+        data-repo="carswg/carswg.github.io"
+        data-repo-id="R_kgDOLX8xOg"
+        data-category="General"
+        data-category-id="DIC_kwDOLX8xOs4CeZQB"
+        data-mapping="title"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light_high_contrast"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+```
