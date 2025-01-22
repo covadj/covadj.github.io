@@ -32,4 +32,4 @@ Beyond the two activities,we also encourage offline collaborations and connectio
 
 -   **Sub-team co-leader**: Bingkai Wang
 
--   **Sub-team members**: Frank Betz, Andreas Brandt, Victoria Johnson, Olga Kuznetsova, Kelly Van Lancker, Hongfei Li, Daniel Rubin, Darren Scott, Arjun Sondhi, Yanyao Yi, Sarwar Mozumder
+-   **Sub-team members**: Frank Betz, Andreas Brandt, Victoria Johnson, Olga Kuznetsova, Kelly Van Lancker, Hongfei Li, Daniel Rubin, Darren Scott, Arjun Sondhi, Yanyao Yi, Sarwar Mozumder, Darren Scott
