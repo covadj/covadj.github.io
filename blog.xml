@@ -9,7 +9,7 @@
 <link>https://carswg.github.io/blog.html</link>
 <atom:link href="https://carswg.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
-<generator>quarto-1.6.39</generator>
+<generator>quarto-1.6.40</generator>
 <lastBuildDate>Tue, 24 Sep 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Covariate Adjustment for Linear Models: Understanding FDA Advice on Standard Errors</title>
