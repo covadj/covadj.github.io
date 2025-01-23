@@ -1,0 +1,20 @@
+---
+title: "COADVISE: Covariate Adjustment with Variable Selection and Missing Data Imputation in Randomized Controlled Trials"
+description: "March 2025 Journal Club by Shu Yang and Yi Liu"
+author: ""
+date: "3/14/2025"
+draft: false
+categories:
+  - journal club
+---
+
+**Topic:** COADVISE: Covariate Adjustment with Variable Selection and Missing Data Imputation in Randomized Controlled Trials
+
+**Datetime: March 14th Friday, 11am-12pm ET.**
+
+**Presenter:** Shu Yang and Yi Liu from North Carolina State University
+
+**Summary:** Adjusting for covariates in randomized controlled trials can enhance the credibility and efficiency of average treatment effect estimation. However, managing numerous covariates and their non-linear transformations is challenging, particularly when outcomes and covariates have missing data. In this tutorial, we propose a principled covariate adjustment framework, "COADVISE," that enables (i) variable selection for covariates most relevant to the outcome, (ii) nonlinear adjustments, and (iii) robust imputation of missing data for both outcomes and covariates. This framework ensures consistent estimates with improved efficiency over unadjusted estimators and provides robust variance estimation, even under outcome model misspecification. We demonstrate efficiency gains through theoretical analysis and conduct extensive simulations to compare alternative variable selection strategies, offering cautionary recommendations. We showcase the framework's practical utility by applying it to the Best Apnea Interventions for Research trial data from the National Sleep Research Resource. A user-friendly R package, Coadvise, facilitates implementation.
+
+Please email Dr. Bingkai Wang at bingkai at umich.edu for the Zoom link.
+```
