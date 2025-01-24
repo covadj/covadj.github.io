@@ -1,0 +1,20 @@
+---
+title: "Estimating the efficiency gain of covariate-adjusted analyses in future clinical trials using external data"
+description: "February 2025 Journal Club by Xiudi Li"
+author: ""
+date: "2/14/2025"
+draft: false
+categories:
+  - journal club
+---
+
+**Topic:** Estimating the efficiency gain of covariate-adjusted analyses in future clinical trials using external data
+
+**Datetime: February 14th 2025 Friday, 11am-12pm ET.**
+
+**Presenter:** Xiudi Li from University of California, Berkeley
+
+**Summary:** We present a framework for using existing external data to identify and estimate the relative efficiency of a covariate-adjusted estimator compared to an unadjusted estimator in a future randomized trial. Under conditions, these relative efficiencies approximate the ratio of sample sizes needed to achieve a desired power. We develop semiparametrically efficient estimators of the relative efficiencies for several treatment effect estimands of interest with either fully or partially observed outcomes, allowing for the application of flexible statistical learning tools to estimate the nuisance functions. We propose an analytic Wald-type confidence interval and a double bootstrap scheme for statistical inference. We demonstrate the performance of the proposed methods through simulation studies and apply these methods to estimate the efficiency gain of covariate adjustment in Covid-19 therapeutic trials.
+
+Please email Dr. Bingkai Wang at bingkai at umich.edu for the Zoom link.
+```
