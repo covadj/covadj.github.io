@@ -10,7 +10,28 @@
 <atom:link href="https://carswg.github.io/journal_club.xml" rel="self" type="application/rss+xml"/>
 <description>Webpage for ASA-BIOP Covariate Adjustment SWG</description>
 <generator>quarto-1.6.40</generator>
-<lastBuildDate>Fri, 14 Feb 2025 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 14 Mar 2025 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>COADVISE: Covariate Adjustment with Variable Selection and Missing Data Imputation in Randomized Controlled Trials</title>
+  <link>https://carswg.github.io/journalclub/journalclub10.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><strong>Topic:</strong> COADVISE: Covariate Adjustment with Variable Selection and Missing Data Imputation in Randomized Controlled Trials</p>
+<p><strong>Datetime: March 14th Friday, 11am-12pm ET.</strong></p>
+<p><strong>Presenter:</strong> Shu Yang and Yi Liu from North Carolina State University</p>
+<p><strong>Summary:</strong> Adjusting for covariates in randomized controlled trials can enhance the credibility and efficiency of average treatment effect estimation. However, managing numerous covariates and their non-linear transformations is challenging, particularly when outcomes and covariates have missing data. In this tutorial, we propose a principled covariate adjustment framework, “COADVISE,” that enables (i) variable selection for covariates most relevant to the outcome, (ii) nonlinear adjustments, and (iii) robust imputation of missing data for both outcomes and covariates. This framework ensures consistent estimates with improved efficiency over unadjusted estimators and provides robust variance estimation, even under outcome model misspecification. We demonstrate efficiency gains through theoretical analysis and conduct extensive simulations to compare alternative variable selection strategies, offering cautionary recommendations. We showcase the framework’s practical utility by applying it to the Best Apnea Interventions for Research trial data from the National Sleep Research Resource. A user-friendly R package, Coadvise, facilitates implementation.</p>
+<p>Please email Dr.&nbsp;Bingkai Wang at bingkai at umich.edu for the Zoom link. ```</p>
+
+
+
+ ]]></description>
+  <category>journal club</category>
+  <guid>https://carswg.github.io/journalclub/journalclub10.html</guid>
+  <pubDate>Fri, 14 Mar 2025 00:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Estimating the efficiency gain of covariate-adjusted analyses in future clinical trials using external data</title>
   <link>https://carswg.github.io/journalclub/journalclub9.html</link>
