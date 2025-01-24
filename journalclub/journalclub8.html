@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="">
+<meta name="dcterms.date" content="2024-12-13">
+<meta name="description" content="December 2024 Journal Club by Marlena Bannick">
 
-<title>journal_club – ASA-BIOP Covariate Adjustment SWG</title>
+<title>RobinCar: An R Package for Robust Covariate Adjustment for Continuous, Discrete, and Time-to-Event Outcomes in Randomized Clinical Trials – ASA-BIOP Covariate Adjustment SWG</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,24 +26,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-5027bf1c1f92ac6615724d89c8213d6a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-5027bf1c1f92ac6615724d89c8213d6a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,68 +69,10 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
 
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="ASA-BIOP Covariate Adjustment SWG" href="journal_club.xml" data-external="1"></head>
+<link rel="stylesheet" href="../styles.css">
+</head>
 
 <body class="nav-fixed">
 
@@ -138,7 +81,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">ASA-BIOP Covariate Adjustment SWG</span>
     </a>
   </div>
@@ -149,7 +92,7 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -158,11 +101,11 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-about-us">    
         <li>
-    <a class="dropdown-item" href="./about.html">
+    <a class="dropdown-item" href="../about.html">
  <span class="dropdown-text">About</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./people.html">
+    <a class="dropdown-item" href="../people.html">
  <span class="dropdown-text">People</span></a>
   </li>  
     </ul>
@@ -173,25 +116,25 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-task-force">    
         <li>
-    <a class="dropdown-item" href="./subteam_advancement.html">
+    <a class="dropdown-item" href="../subteam_advancement.html">
  <span class="dropdown-text">Advancement Subteam</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./subteam_software.html">
+    <a class="dropdown-item" href="../subteam_software.html">
  <span class="dropdown-text">Software Subteam</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./subteam_standardization.html">
+    <a class="dropdown-item" href="../subteam_standardization.html">
  <span class="dropdown-text">Standardization and Outreach Subteam</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./subteam_education.html">
+    <a class="dropdown-item" href="../subteam_education.html">
  <span class="dropdown-text">Education Subteam</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./news.html"> 
+    <a class="nav-link" href="../news.html"> 
 <span class="menu-text">News</span></a>
   </li>  
   <li class="nav-item dropdown ">
@@ -200,17 +143,17 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu" aria-labelledby="nav-menu-event">    
         <li>
-    <a class="dropdown-item" href="./journal_club.html">
+    <a class="dropdown-item" href="../journal_club.html">
  <span class="dropdown-text">Journal Club</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="./conference.html">
+    <a class="dropdown-item" href="../conference.html">
  <span class="dropdown-text">Conference Presentation</span></a>
   </li>  
     </ul>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="./blog.html"> 
+    <a class="nav-link" href="../blog.html"> 
 <span class="menu-text">Blog</span></a>
   </li>  
 </ul>
@@ -219,7 +162,7 @@ window.Quarto = {
     <a href="https://www.linkedin.com/in/asa-biopharmaceutical-section-working-group-of-covariate-adjustment-2050b62b8/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-linkedin"></i></a>
     <a href="https://twitter.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-twitter-x"></i></a>
     <a href="https://github.com/carswg/carswg.github.io" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
-    <a href="./index.xml" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-rss"></i></a>
+    <a href="../index.xml" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-rss"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
@@ -228,289 +171,57 @@ window.Quarto = {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#journal-club" id="toc-journal-club" class="nav-link active" data-scroll-target="#journal-club">Journal Club</a></li>
-  <li><a href="#events" id="toc-events" class="nav-link" data-scroll-target="#events">Events</a></li>
-  </ul>
-</nav>
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(8)</span></div><div class="category" data-category="am91cm5hbCUyMGNsdWI=">journal club <span class="quarto-category-count">(8)</span></div></div></div>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
+    </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"></header>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">RobinCar: An R Package for Robust Covariate Adjustment for Continuous, Discrete, and Time-to-Event Outcomes in Randomized Clinical Trials</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">journal club</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    December 2024 Journal Club by Marlena Bannick
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 13, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p><strong>Topic:</strong> RobinCar: An R Package for Robust Covariate Adjustment for Continuous, Discrete, and Time-to-Event Outcomes in Randomized Clinical Trials</p>
+<p><strong>Datetime: December 13th Friday, 11am-12pm ET.</strong></p>
+<p><strong>Presenter:</strong> Marlena Bannick from University of Washington</p>
+<p><strong>Summary:</strong> Covariate adjustment is a powerful technique that can improve efficiency when estimating treatment effects in randomized clinical trials. We develop a one-stop and user-friendly R package called RobinCar that allows clinical researchers to conveniently and robustly apply covariate adjustment. RobinCar covers covariate adjustment using linear and non-linear working models, and covariate adjustment for time-to-event outcomes. The guiding principles of RobinCar are to provide users with methods that (1) target the same estimand as the unadjusted analysis, (2) do not make any model assumptions beyond what is assumed for an unadjusted analysis, and (3) have robust variance estimation. Importantly, RobinCar takes into account the randomization scheme when constructing the variance estimate (including simple, stratified permuted block, and Pocock and Simon’s minimization). In this talk, we will give an overview of RobinCar, which will include a tour of the functions, and a brief description of the methodologies behind each of the functions. We will also include a discussion of RobinCar2, which is currently being developed by the Software sub-team of the ASA-BIOP Covariate Adjustment Scientific Working Group. <strong>Recording:</strong></p>
+<iframe src="https://drive.google.com/file/d/1nuGiDxcT4-DLs_WQtRHNg3emk3RKDQnm/preview" width="640" height="480" allowfullscreen="true" allow="autoplay"></iframe>
+<p><strong>Slides:</strong> https://docs.google.com/presentation/d/1AiublzA9emaoucCmpqVTsr46c1WoHTAC/edit?usp=sharing&amp;ouid=110697570386924275089&amp;rtpof=true&amp;sd=true</p>
+<script src="https://giscus.app/client.js" data-repo="carswg/carswg.github.io" data-repo-id="R_kgDOLX8xOg" data-category="General" data-category-id="DIC_kwDOLX8xOs4CeZQB" data-mapping="title" data-strict="1" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="bottom" data-theme="light_high_contrast" data-lang="en" crossorigin="anonymous" async="">
+</script>
 
 
 
-
-<section id="journal-club" class="level2">
-<h2 class="anchored" data-anchor-id="journal-club">Journal Club</h2>
-<p>The ASA Covariate Adjustment Working Group Journal Club convenes monthly, offering a vibrant forum for discussing the latest findings, challenges, or concepts related to covariate adjustment. Our gatherings alternate between two engaging formats:</p>
-<ol type="1">
-<li>A roundtable where members delve into specific questions or issues they’ve encountered, and</li>
-<li>A seminar series featuring presentations on recent scholarly articles by our members or esteemed guest speakers.</li>
-</ol>
-<p>These enriching sessions are held on the <strong>second Friday of every month, from 11 am to 12 pm EDT</strong>.</p>
-<p>We warmly welcome and highly value your contributions, including topic suggestions, ideas, or feedback for future Journal Club meetings. Please share your thoughts with Bingkai Wang at <a href="mailto:bingkai@umich.edu">bingkai@umich.edu</a>.</p>
-</section>
-<section id="events" class="level2">
-<h2 class="anchored" data-anchor-id="events">Events</h2>
-<!-- List of Journal Club activity: -->
-<!-- 1.  Journal Club: Discussion on the FDA Guidance for Covariate Adjustment, 15 Mar 2024. [details](./posts/journalclub1.html) -->
-<!-- 2.  \[Upcoming\] Journal Club: Variance Estimation for G-computation with Binary Outcomes, 12 Apr 2024. [details](./posts/journalclub2.html) -->
-
-
-
-</section>
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="am91cm5hbCUyMGNsdWI=" data-listing-date-sort="1734048000000" data-listing-file-modified-sort="1737730417454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="317">
-<div class="thumbnail">
-<p><a href="./journalclub/journalclub8.html" class="no-external"></a></p><a href="./journalclub/journalclub8.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./journalclub/journalclub8.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./journalclub/journalclub8.html" class="no-external">RobinCar: An R Package for Robust Covariate Adjustment for Continuous, Discrete, and Time-to-Event Outcomes in Randomized Clinical Trials</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./journalclub/journalclub8.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5hbCUyMGNsdWI='); return false;">
-journal club
-</div>
-</div>
-<div class="listing-description">
-<a href="./journalclub/journalclub8.html" class="no-external">December 2024 Journal Club by Marlena Bannick</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./journalclub/journalclub8.html" class="no-external">
-<div class="listing-date">
-Dec 13, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="am91cm5hbCUyMGNsdWI=" data-listing-date-sort="1731024000000" data-listing-file-modified-sort="1737730417454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="306">
-<div class="thumbnail">
-<p><a href="./journalclub/journalclub7.html" class="no-external"></a></p><a href="./journalclub/journalclub7.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./journalclub/journalclub7.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./journalclub/journalclub7.html" class="no-external">Adjustments with Many Regressors under Covariate-Adaptive Randomizations</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./journalclub/journalclub7.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5hbCUyMGNsdWI='); return false;">
-journal club
-</div>
-</div>
-<div class="listing-description">
-<a href="./journalclub/journalclub7.html" class="no-external">November 2024 Journal Club by Yichong Zhang</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./journalclub/journalclub7.html" class="no-external">
-<div class="listing-date">
-Nov 8, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="am91cm5hbCUyMGNsdWI=" data-listing-date-sort="1728604800000" data-listing-file-modified-sort="1737730417454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="365">
-<div class="thumbnail">
-<p><a href="./journalclub/journalclub6.html" class="no-external"></a></p><a href="./journalclub/journalclub6.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./journalclub/journalclub6.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./journalclub/journalclub6.html" class="no-external">Covariate-Adjusted Randomization Analyzed with Randomization-Based Inference</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./journalclub/journalclub6.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5hbCUyMGNsdWI='); return false;">
-journal club
-</div>
-</div>
-<div class="listing-description">
-<a href="./journalclub/journalclub6.html" class="no-external">Oct 2024 Journal Club by Jonathan Chipman</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./journalclub/journalclub6.html" class="no-external">
-<div class="listing-date">
-Oct 11, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="am91cm5hbCUyMGNsdWI=" data-listing-date-sort="1726185600000" data-listing-file-modified-sort="1737730417454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="402">
-<div class="thumbnail">
-<p><a href="./journalclub/journalclub5.html" class="no-external"></a></p><a href="./journalclub/journalclub5.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./journalclub/journalclub5.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./journalclub/journalclub5.html" class="no-external">Automated, efficient and model-free inference for randomized clinical trials via data-driven covariate adjustment</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./journalclub/journalclub5.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5hbCUyMGNsdWI='); return false;">
-journal club
-</div>
-</div>
-<div class="listing-description">
-<a href="./journalclub/journalclub5.html" class="no-external">September 2024 Journal Club by Kelly Van Lancker</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./journalclub/journalclub5.html" class="no-external">
-<div class="listing-date">
-Sep 13, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="am91cm5hbCUyMGNsdWI=" data-listing-date-sort="1718323200000" data-listing-file-modified-sort="1737730417454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="332">
-<div class="thumbnail">
-<p><a href="./journalclub/journalclub4.html" class="no-external"></a></p><a href="./journalclub/journalclub4.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./journalclub/journalclub4.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./journalclub/journalclub4.html" class="no-external">Strategies for Practical and Effective Covariate Adjustment of Continuous Outcomes</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./journalclub/journalclub4.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5hbCUyMGNsdWI='); return false;">
-journal club
-</div>
-</div>
-<div class="listing-description">
-<a href="./journalclub/journalclub4.html" class="no-external">June 2024 Journal Club by Michel Friesenhahn</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./journalclub/journalclub4.html" class="no-external">
-<div class="listing-date">
-Jun 14, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="am91cm5hbCUyMGNsdWI=" data-listing-date-sort="1715299200000" data-listing-file-modified-sort="1737730417454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="136">
-<div class="thumbnail">
-<p><a href="./journalclub/journalclub3.html" class="no-external"></a></p><a href="./journalclub/journalclub3.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./journalclub/journalclub3.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./journalclub/journalclub3.html" class="no-external">A General Form of Covariate Adjustment in Randomized Clinical Trials</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./journalclub/journalclub3.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5hbCUyMGNsdWI='); return false;">
-journal club
-</div>
-</div>
-<div class="listing-description">
-<a href="./journalclub/journalclub3.html" class="no-external">May 2024 Journal Club by Marlena Bannick</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./journalclub/journalclub3.html" class="no-external">
-<div class="listing-date">
-May 10, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="am91cm5hbCUyMGNsdWI=" data-listing-date-sort="1712880000000" data-listing-file-modified-sort="1737730417454" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="146">
-<div class="thumbnail">
-<p><a href="./journalclub/journalclub2.html" class="no-external"></a></p><a href="./journalclub/journalclub2.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./journalclub/journalclub2.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./journalclub/journalclub2.html" class="no-external">Variance Estimation for G-computation with Binary Outcomes</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./journalclub/journalclub2.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5hbCUyMGNsdWI='); return false;">
-journal club
-</div>
-</div>
-<div class="listing-description">
-<a href="./journalclub/journalclub2.html" class="no-external">April 2024 Journal Club by Dominic Magirr</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./journalclub/journalclub2.html" class="no-external">
-<div class="listing-date">
-Apr 12, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="am91cm5hbCUyMGNsdWI=" data-listing-date-sort="1710460800000" data-listing-file-modified-sort="1737730417453" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="147">
-<div class="thumbnail">
-<p><a href="./journalclub/journalclub1.html" class="no-external"></a></p><a href="./journalclub/journalclub1.html" class="no-external">
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-</a><p><a href="./journalclub/journalclub1.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./journalclub/journalclub1.html" class="no-external">Discussion on the FDA Guidance for Covariate Adjustment</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./journalclub/journalclub1.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('am91cm5hbCUyMGNsdWI='); return false;">
-journal club
-</div>
-</div>
-<div class="listing-description">
-<a href="./journalclub/journalclub1.html" class="no-external">March 2024 Journal Club by Frank Bretz, Daniel Rubin, and Ting Ye</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./journalclub/journalclub1.html" class="no-external">
-<div class="listing-date">
-Mar 15, 2024
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
