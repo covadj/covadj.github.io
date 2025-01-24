@@ -43,7 +43,7 @@ title: "People"
 | Jingyi     | Liu          | Eli Lilly                                   |
 | Jonathan   | Chipman      | University of Utah                          |
 | Jun        | Shao         | University of Wisconsin-Madison, Statistics |
-| Kayla      | Irish        | University of Washington, Biostatistics     |
+| Kayla      | Irish        | University of Washington, Statistics        |
 | Kelly Van  | Lancker      | Ghent University, Applied Math/CS/Stat      |
 | Ken        | Wu           | Beigene                                     |
 | Leiya      | Han          | PPD                                         |
