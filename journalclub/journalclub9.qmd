@@ -16,5 +16,27 @@ categories:
 
 **Summary:** We present a framework for using existing external data to identify and estimate the relative efficiency of a covariate-adjusted estimator compared to an unadjusted estimator in a future randomized trial. Under conditions, these relative efficiencies approximate the ratio of sample sizes needed to achieve a desired power. We develop semiparametrically efficient estimators of the relative efficiencies for several treatment effect estimands of interest with either fully or partially observed outcomes, allowing for the application of flexible statistical learning tools to estimate the nuisance functions. We propose an analytic Wald-type confidence interval and a double bootstrap scheme for statistical inference. We demonstrate the performance of the proposed methods through simulation studies and apply these methods to estimate the efficiency gain of covariate adjustment in Covid-19 therapeutic trials.
 
-Please email Dr. Bingkai Wang at bingkai at umich.edu for the Zoom link.
+**Recording:** 
+```{=html}
+<iframe src="https://drive.google.com/file/d/1F9j72I2qH76gp4K6B6xpFPese24nN0QE/preview" width="640" height="480" allowfullscreen="true" allow="autoplay"></iframe>
+```
+
+**Slides:** https://drive.google.com/file/d/1kZ-ppZM7B2J6jjaxD7zfGONKiYR81bgD/view?usp=sharing
+
+```{=html}
+<script src="https://giscus.app/client.js"
+        data-repo="carswg/carswg.github.io"
+        data-repo-id="R_kgDOLX8xOg"
+        data-category="General"
+        data-category-id="DIC_kwDOLX8xOs4CeZQB"
+        data-mapping="title"
+        data-strict="1"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light_high_contrast"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
 ```
